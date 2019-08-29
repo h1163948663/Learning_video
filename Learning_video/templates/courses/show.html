@@ -1,0 +1,779 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+{% block content %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Lei Shi">
+        <meta http-equiv="Cache-Control" content="o-transform">
+        <meta http-equiv="Cache-Control" content="no-siteapp">
+        <meta name="csrf-token" content="1483780974##87f89328c5616669f00302a263fe9061bb852818">
+
+          <link href="https://vjs.zencdn.net/7.6.0/video-js.css" rel="stylesheet">
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+        <title> {{ object.courese_name }} - 学习社</title>
+
+
+
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="{% static 'font-awesome/4.7.0/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'highlight.js/9.8.0/monokai-sublime.min.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/libs/bootstrap/3.3.7/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/libs/katex/0.6.0/katex.min.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/libs/videojs/5.11.7/video-js.min.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/dest/styles.css' %}?=2016121272249">
+
+        <style>
+            @font-face {
+                font-family: "lantingxihei";
+                src: url("{% static 'fonts/FZLTCXHJW.TTF' %}");
+            }
+
+            /* modal 模态框*/
+            #invite-user .modal-body {
+                overflow: hidden;
+            }
+
+            #invite-user .modal-body .form-label {
+                margin-bottom: 16px;
+                font-size: 14px;
+            }
+
+            #invite-user .modal-body .form-invite {
+                width: 80%;
+                padding: 6px 12px;
+                background-color: #eeeeee;
+                border: 1px solid #cccccc;
+                border-radius: 5px;
+                float: left;
+                margin-right: 10px;
+            }
+
+            #invite-user .modal-body .msg-modal-style {
+                background-color: #7dd383;
+                margin-top: 10px;
+                padding: 6px 0;
+                text-align: center;
+                width: 100%;
+            }
+
+            #invite-user .modal-body .modal-flash {
+                position: absolute;
+                top: 53px;
+                right: 74px;
+                z-index: 999;
+            }
+
+            /* end modal */
+
+            .en-footer {
+                padding: 30px;
+                text-align: center;
+                font-size: 14px;
+            }
+        </style>
+        <link rel="stylesheet" href="{% static 'restatic/js/libs/marked/katex/katex.min.css' %}">
+        <style>
+            .bootcamp-infobox {
+                margin: 50px 0 0;
+            }
+
+            .invite-friends-link {
+                margin-top: 10px;
+                padding-left: 8px;
+            }
+
+            .invite-friends-link input {
+                margin-left: -5px;
+            }
+
+            .invite-friends-link button {
+                float: left;
+                margin-top: 5px;
+                margin-left: -5px;
+            }
+
+            .invite-friends-link .copy-msg {
+                float: left;
+                margin-top: 10px;
+                margin-left: 20px;
+                color: #42b1ad;
+            }
+
+            p.join-vip-faq {
+                margin-top: 20px;
+                margin-bottom: -50px;
+                font-size: 13px;
+            }
+
+            p.join-vip-faq img {
+                height: 13px;
+                width: 13px;
+                margin-top: -2px;
+            }
+
+            a.vip-without-bean {
+                font-size: 18px;
+                line-height: 30px;
+            }
+        </style>
+
+
+    </head>
+
+    <body>
+
+
+<div class="container layout layout-margin-top">
+
+<ol class="breadcrumb">
+    <li><a href="/courses/">全部课程</a></li>
+
+    <li>
+
+    <a href="/courses/?tag=Linux">Linux</a>
+
+    </li>
+
+    <li class="active">
+        <a href="/courses/1">
+        Linux 基础入门（新版）
+        </a>
+    </li>
+</ol>
+
+    <div class="row">
+        <div class="col-md-9 layout-body">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="side-image side-image-mobile">
+        <img src="https://dn-simplecloud.shiyanlou.com/ncn1.jpg?imageView2/0/h/300">
+    </div>
+    <div class="content course-infobox">
+        <div class="clearfix course-infobox-header">
+            <h4 class="pull-left course-infobox-title">
+
+                <span>Linux 基础入门（新版）</span>
+
+            </h4>
+            <div class="pull-right course-infobox-follow"
+                data-follow-url="/courses/1/follow"
+                data-unfollow-url="/courses/1/unfollow">
+                <span class="course-infobox-followers">4401</span>
+                <span>人关注</span>
+
+                <i class="fa fa-star-o" data-next="/login?next=%2Fcourses%2F1"></i>
+
+            </div>
+        </div>
+        <div class="clearfix course-infobox-body">
+            <div class="course-infobox-content">
+            <p>要在实验楼愉快地学习，先要熟练地使用 Linux，本实验介绍 Linux 基本操作，shell 环境下的常用命令。</p>
+
+            </div>
+
+            <div class="course-infobox-progress">
+
+
+
+                    <div class="course-progress-new"></div>
+
+
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                    <div class="course-progress-new"></div>
+
+                <span>（0/17）</span>
+            </div>
+            <video id="my_video_1" class="video-js vjs-default-skin" width="640px" height="267px"
+      controls preload="none" poster='http://video-js.zencoder.com/oceans-clip.jpg'
+      data-setup='{ "aspectRatio":"640:267", "playbackRates": [1,1.25,1.5,1.75,2] }'>
+    <source src="http://v.itheima.com/python/懂中文就能学会python/01linux/01-课程安排.mp4" type='video/mp4' />
+    <source src="http://v.itheima.com/python/懂中文就能学会python/01linux/01-课程安排.mp4" type='video/webm' />
+  </video>
+
+
+
+
+                <div class="pull-right course-infobox-price">
+
+                </div>
+
+
+        </div>
+
+        <div class="clearfix course-infobox-footer">
+
+            <div class="pull-right course-infobox-learned">85243 人学过</div>
+        </div>
+
+    </div>
+    <div class="content">
+        <ul class="nav nav-tabs" role="tablist">
+
+            <li role="presentation" class="active">
+                <a href="#labs" aria-controls="labs" role="tab" data-toggle="tab">实验列表</a>
+            </li>
+
+            <li role="presentation">
+                <a href="#comments" class="stat-event" aria-controls="comments" role="tab" data-stat="course_comment" data-toggle="tab">课程评论(1194)</a>
+            </li>
+            <li role="presentation">
+                <a href="#reports" class="stat-event" data-stat="course_report" aria-controls="reports" role="tab" data-toggle="tab">实验报告(3417)</a>
+            </li>
+            <li role="presentation">
+                <a href="#questions" class="stat-event" data-stat="course_question" aria-controls="questions" role="tab" data-toggle="tab">实验问答(1108)</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+
+            <div role="tabpanel" class="tab-pane active" id="labs">
+
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第1节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux 系统简介">Linux 系统简介</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+                <a class="btn btn-default" href="#sign-modal" data-toggle="modal" data-sign="signin" data-next="/courses/1">查看文档</a>
+                <a class="btn btn-primary" href="#sign-modal" data-toggle="modal" data-sign="signin" data-next="/courses/1">开始实验</a>
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第2节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="基本概念及操作">基本概念及操作</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第3节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="用户及文件权限管理">用户及文件权限管理</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第4节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux 目录结构及文件基本操作">Linux 目录结构及文件基本操作</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第5节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="环境变量与文件查找">环境变量与文件查找</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第6节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="文件打包与解压缩">文件打包与解压缩</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第7节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="文件系统操作与磁盘管理">文件系统操作与磁盘管理</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第8节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux下的帮助命令">Linux下的帮助命令</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第9节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux任务计划crontab">Linux任务计划crontab</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第10节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="命令执行顺序控制与管道">命令执行顺序控制与管道</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第11节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="简单的文本处理">简单的文本处理</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第12节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="数据流重定向">数据流重定向</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第13节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="正则表达式基础">正则表达式基础</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第14节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux下软件安装">Linux下软件安装</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第15节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux 进程概念">Linux 进程概念</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第16节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux 进程管理">Linux 进程管理</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="lab-item ">
+    <div class="lab-item-status">
+
+            <img src="{% static 'img/lab-not-ok.png' %}">
+
+    </div>
+    <div class="lab-item-index">第17节</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux 日志系统">Linux 日志系统</div>
+    <div class="pull-right lab-item-ctrl">
+
+
+
+
+
+
+    </div>
+</div>
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane course-comment" id="comments">
+                <div class="comment-box">
+                    <div class="comment-form">
+
+                            <div class="comment-form-unlogin">
+                                请
+                                <a href="#sign-modal" data-toggle="modal" data-sign="signin" data-next="/courses/1"> 登录 </a>
+                                后发表评论
+                            </div>
+
+                    </div>
+                    <div class="comment-title">最新评论</div>
+                    <div class="comment-list">
+                    </div>
+                    <div class="pagination-container"></div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="reports">
+				<span class="lab-id active" data-lab-id="None">全部</span>
+
+				<span class="lab-id" data-lab-id="1">第1节</span>
+
+				<span class="lab-id" data-lab-id="2">第2节</span>
+
+				<span class="lab-id" data-lab-id="3">第3节</span>
+
+				<span class="lab-id" data-lab-id="59">第4节</span>
+
+				<span class="lab-id" data-lab-id="60">第5节</span>
+
+				<span class="lab-id" data-lab-id="61">第6节</span>
+
+				<span class="lab-id" data-lab-id="62">第7节</span>
+
+				<span class="lab-id" data-lab-id="1917">第8节</span>
+
+				<span class="lab-id" data-lab-id="1918">第9节</span>
+
+				<span class="lab-id" data-lab-id="63">第10节</span>
+
+				<span class="lab-id" data-lab-id="337">第11节</span>
+
+				<span class="lab-id" data-lab-id="346">第12节</span>
+
+				<span class="lab-id" data-lab-id="354">第13节</span>
+
+				<span class="lab-id" data-lab-id="356">第14节</span>
+
+				<span class="lab-id" data-lab-id="1943">第15节</span>
+
+				<span class="lab-id" data-lab-id="1944">第16节</span>
+
+				<span class="lab-id" data-lab-id="1945">第17节</span>
+
+                <div class="report-owner">
+                    <span class="owner-list" data-user-id="">我的报告</span> / <span class="owner-list active" data-user-id="None">所有报告</span>
+                </div>
+                <div class="row report-items"></div>
+                <div class="pagination-container"></div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="questions">
+                <a class="btn btn-success" data-toggle="modal" data-target="#askquestion">我要提问</a>
+                <hr>
+                <ul class="row question-items"></ul>
+                <div class="pagination-container"></div>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="{% static 'app/dest/lib/lib.js' %}?=2016121272249"></script>
+    <script src="{% static 'jquery/2.2.4/jquery.min.js' %}"></script>
+    <script src="{% static 'ace/1.2.5/ace.js' %}"></script>
+    <script src="{% static 'aliyun/aliyun-oss-sdk-4.3.0.min.js' %}"></script>
+    <script src="{% static 'highlight.js/9.8.0/highlight.min.js' %}"></script>
+    <script src="{% static 'jspdf/1.2.61/jspdf.min.js' %}"></script>
+    <script src="{% static 'plupload/2.1.9/js/plupload.full.min.js' %}"></script>
+    <script src="{% static 'zeroclipboard/2.2.0/ZeroClipboard.min.js' %}"></script>
+    <script src="{% static 'videojs/video.min.js' %}"></script>
+    <script src="{% static 'bootstrap-tour/0.11.0/js/bootstrap-tour.min.js' %}"></script>
+    <script src="{% static 'bootstrap-table/1.11.0/bootstrap-table.min.js' %}"></script>
+    <script src="{% static 'bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js' %}"></script>
+    <script src="{% static 'bootstrap-table/1.11.0/extensions/filter-control/bootstrap-table-filter-control.min.js' %}"></script>
+
+    <script src="{% static 'ravenjs/3.7.0/raven.min.js' %}"></script>
+    <script>
+        Raven.config('https://bc3878b7ed0a4468a65390bd79e6e73f@sentry.shiyanlou.com/5', {
+            release: '3.12.13'
+        }).install();
+    </script>
+
+
+    <div id="jinja-data"
+         data-userlab-id=""
+         data-course-id="1"
+         data-is-authenticated="false"
+         data-user-joined="false"
+         data-user-logined="false"
+         data-show-student-info-modal="false"
+         data-login-url="/login?next=%2Fcourses%2F1"
+         data-start-newlab-url="/courses/clear"
+
+         data-faq="/faq"
+         data-comment-post="/courses/1/comments"
+         data-loginurl="/login?next=%2Fcourses%2F1"
+         data-site-type="0"
+         data-report-post="/courses/1/reports"
+         data-recomment-img="{% static 'img/recommentReport.png' %}"
+         data-charge-course-phone-code="/user/sms/code"
+         data-join-private-course="/courses/join"
+         data-current-user-id=""
+         data-vip-icon="{% static 'img/vip-icon.png' %}"
+         data-vip-index="/vip"
+         data-get-question-url="/courses/1/questions"
+         data-real-price=""
+
+         data-query-bill="/purchase/bill/query"
+         data-question-form="/questions/meta"
+         data-qiniu-token-url="/api/qiniu/token"
+    ></div>
+    <script src="{% static 'app/dest/course/labs.js' %}?=2016121272249"></script>
+
+    </body>
+    </html>
+{% endblock content %}

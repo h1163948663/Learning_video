@@ -1,0 +1,116 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>登录</title>
+<meta name="author" content="DeathGhost" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/ST.css' %}" tppabs="{% static 'css/ST.css' %}" />
+<style>
+body{height:100%;background:#16a085;overflow:hidden;}
+canvas{z-index:-1;position:absolute;}
+</style>
+<script src={% static 'js/JQUERY_1.js' %}></script>
+<script src={% static 'js/verificationNumbers.js' %} tppabs={% static 'js/verificationNumbers.js' %}></script>
+<script src={% static 'js/Particleground.js' %} tppabs={% static 'js/Particleground.js' %}></script>
+<script>
+$(document).ready(function() {
+  //粒子背景特效
+  $('body').particleground({
+    dotColor: '#5cbdaa',
+    lineColor: '#5cbdaa'
+  });
+  //验证码
+  {#createCode();#}
+  {#//测试提交，对接程序删除即可#}
+  {#$(".submit_btn").click(function(){#}
+	{#  location.href="javascrpt:;"/*tpa=http://***index.html*/;#}
+	{#  });#}
+});
+</script>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/gritter/css/jquery.gritter.css' %}" />
+  <script type="text/javascript" src="{% static 'assets/gritter/js/jquery.gritter.js' %}"></script>
+</head>
+<body>
+<form  id="login_form" method="post">
+        {% csrf_token %}
+<dl class="admin_login">
+ <dt>
+  <strong>用户登入</strong>
+ </dt>
+ <dd class="user_icon">
+{#  <input type="text" placeholder="用户名" class="login_txtbx"/>#}
+     {{ form.username }}
+ </dd>
+ <dd class="pwd_icon">
+{#  <input type="password" placeholder="密码" class="login_txtbx"/>#}
+     {{ form.password }}
+ </dd>
+
+<dd class="val_icon" >
+    <div class="checkcode" > {{ form.captcha  }}
+    </div>
+    <div style="float: right">
+     <a href="javascript:void(0);"><img id="captcha_img" src="#"  style="padding: 1px"/></a>
+    </div>
+</dd>
+ <dd>
+  <input type="submit" value="立即登入" class="submit_btn" id="login_btn" />
+ </dd>
+            <p class="msg"></p>
+            {% if msg %}
+            <div class="alert alert-block alert-danger fade in">
+                  <button data-dismiss="alert" class="close close-sm" type="button">
+                      <i class="icon-remove"></i>
+                  </button>
+                  <strong>提醒!</strong> {{ msg }}
+            </div>
+            {% endif %}
+ <dd>
+  <p>© 2015-2016 wh 版权所有</p>
+ </dd>
+</dl>
+</form>
+    <script>
+    get_captcha_img();
+    $("#captcha_img").click(get_captcha_img);
+
+    function get_captcha_img() {
+        $.ajax({
+            url: '{% url 'apis:get_captcha' %}',
+            type: 'GET',
+            dataType: 'text',
+            success: function (data) {
+                $('#captcha_img').attr('src', data);
+            }
+        });
+    }
+    </script>
+    <script>
+    // 这里在form中定义了，如果没定义可以用jquery添加事件
+    // $("#id_captcha").blur(check_captcha);
+
+    // 当失去焦点时检查验证码
+    function check_captcha() {
+        var captcha_code = $('#id_captcha').val();
+        if (captcha_code.length == 0){
+            return false
+        }
+        $.ajax({
+            url: '{% url 'apis:check_captcha' %}',
+            type: 'GET',
+            dataType: 'json',
+            data: {"captcha_code": captcha_code},
+            success: function (data) {
+                if(data.code == 400){
+                     $('.msg').html("验证码错误");
+                }else{
+                    $('.msg').html("");
+                }
+            }
+        });
+    }
+    </script>
+</body>
+
+</html>
