@@ -4,7 +4,7 @@ from django.shortcuts import render,HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import View
-from apps.videos.models import PythonCoures
+from apps.videos.models import ALLCoureslist
 
 
 def index(request):
@@ -14,9 +14,9 @@ def index(request):
 
 class PythonVideos(LoginRequiredMixin,View):
     def get(self, request):
-        python_coures = PythonCoures.objects.all()
+        all_coures = ALLCoureslist.objects.all()
         search = request.GET.get("search", "")
-        kwgs = {"python_coures":python_coures,"search":search}
+        kwgs = {"python_coures":all_coures,"search":search}
         return render(request,'courses/show.html',kwgs)
 
 from apps.videos.models import Courese,Category
@@ -29,11 +29,6 @@ class Coureses(View):
         paginator = Paginator(coureses_list,15)
         page = int(request.GET.get("page", 1))
         coures_tag = Category.objects.all()
-
-        # coureses_list = Courese.objects.all()
-        # total = len(coureses_list)
-        # coureses_list = coureses_list.values('id', 'courese_name', 'num', 'content', 'level','img','tag' )
-        coures_level = Courese.LEVEL_CHOICES
         try:
             contacts = paginator.page(page)
         except PageNotAnInteger:
@@ -41,8 +36,10 @@ class Coureses(View):
             contacts = paginator.page(1)
         except EmptyPage:
             contacts = paginator.page(paginator.num_pages)
+
+        print(contacts)
         # 格式是bootstrap-table要求的格式
-        coureses_dict = { 'contacts': contacts,'coures_tag':coures_tag,'coures_level':coures_level,}
+        coureses_dict = { 'contacts': contacts,'coures_tag':coures_tag,}
         return render(request,'courses/index.html',coureses_dict)
 
 from apps.videos.models import Courese
@@ -55,6 +52,5 @@ class CoureseDetail(LoginRequiredMixin,DetailView):
 
     def get_context_data(self, **kwargs):
         courese = self.get_object()
-        kwargs["my_courese"] = Courese.objects.filter(courese_name=courese.courese_name,content=courese.content,user=self.request.user)
+        kwargs["my_courese"] = Courese.objects.filter(courese_name=courese.courese_name,content=courese.content)
         return super().get_context_data(**kwargs)
-

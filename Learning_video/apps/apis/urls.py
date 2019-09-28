@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^mobile_captcha/$', views.get_mobile_captcha, name='mobile_captcha'),
     # url(r'^coureses/$',views.get_coureses,name="get_coureses"),
     url(r'^courese/$',views.CouresList.as_view(),name="CouresList"),
+    url(r'^search/$',views.CoureseSearch.as_view(),name="CoureseSearch")
     # url(r'^courese/coolection/(?P<id>\d+)/$'),
 
 ]

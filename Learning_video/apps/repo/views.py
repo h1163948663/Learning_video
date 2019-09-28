@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import DetailView
 # Create your views here.
-from apps.videos.models import PythonCoures,Courese
+from apps.videos.models import ALLCoureslist,Courese
 from django.contrib.auth.mixins import LoginRequiredMixin
 def index(requestion):
     return render(requestion,'paths/index.html')

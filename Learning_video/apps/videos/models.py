@@ -36,33 +36,42 @@ class Courese(models.Model):
     )
     courese_name = models.CharField("课程名称",unique=True,max_length=128)
     num = models.IntegerField("课程节数",null=True)
-    level = models.IntegerField(verbose_name="课程等级",null=False,choices=LEVEL_CHOICES,validators=[valid_difficulty],)
     content = RichTextUploadingField("课程描述",null=True, )
-    img = models.ImageField("图片描述",upload_to="avator/%Y%m%d/", default="avator/default.jpg",)
+    img = models.ImageField("图片",upload_to="avator/%Y%m%d/", default="avator/default.jpg",)
     tag = models.ForeignKey(Category,verbose_name="标签",null=True,)
-    user = models.ForeignKey(User,verbose_name="观看用户")
+    user = models.ForeignKey(User,verbose_name="观看用户",)
     class Meta:
-        verbose_name = "课程"
+        verbose_name = "课程大纲"
         verbose_name_plural = verbose_name
+        ordering = ['id']
 
     def __str__(self):
         return f"{self.courese_name}"
 
-class PythonCoures(models.Model):
-    id = models.IntegerField(db_column='ID',primary_key=True)  # Field name made lowercase.
-    coure_name =models.ForeignKey(Courese,verbose_name="python课程",)
-    data = models.Field(verbose_name="视频")
-    text = models.TextField("课程标题",unique=True, max_length=256)
+# class PythonCoures(models.Model):
+#     id = models.IntegerField(db_column='ID',primary_key=True)  # Field name made lowercase.
+#     coure_name =models.ForeignKey(Courese)
+#     data = models.Field(verbose_name="视频")
+#     text = models.TextField("全部课程标题",unique=True, max_length=256)
+#
+#
+#     class Meta:
+#         managed = False
+#         verbose_name = "全部课程"
+#         verbose_name_plural = verbose_name
+#         ordering = ['id']
 
+
+class ALLCoureslist(models.Model):
+    id = models.IntegerField(db_column='ID',primary_key=True)  # Field name made lowercase.
+    coure_id =models.ForeignKey(Courese,verbose_name="所有课程",null=True)
+    link = models.CharField(verbose_name="视频链接",null=True,max_length=9999)
+    text = models.TextField("课程标题",unique=True, max_length=256,null=True)
 
     class Meta:
-        managed = False
-        db_table = 'python_coures'
-        verbose_name = "python课程"
+        verbose_name = "全部课程视频"
         verbose_name_plural = verbose_name
         ordering = ['id']
-
-
 #课程目录
 # class CouresCatalog(models.Model):
 #     name = models.CharField("课程目录",max_length=64)

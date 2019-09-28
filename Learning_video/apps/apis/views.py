@@ -85,28 +85,19 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 class CouresList(View):
     def get(self,request):
-        level = request.GET.get("level")
+
+
         tag = request.GET.get("tag")
+        courses = 0
         if tag:
             tag_id = Category.objects.filter(name=tag).first()
-        print(tag)
-        print(level)
-        if level and tag:
-            courses = Courese.objects.filter(level=level,tag_id=tag_id).all()
-        elif level:
-            courses = Courese.objects.filter(level=level).all()
-        elif tag:
             courses = Courese.objects.filter(tag_id=tag_id).all()
-        # tag_id = Category.objects.filter(name=request.GET.get("tag")).first().id
-        # print(tag_id)
-        coures_level = Courese.LEVEL_CHOICES
+        print(tag)
         coures_tag = Category.objects.all()
         paginator = Paginator(courses,15)
-        page = int(request.GET.get("page", 1))
-        # coureses_list = Courese.objects.all()
-        # total = len(coureses_list)
-        # coureses_list = coureses_list.values('id', 'courese_name', 'num', 'content', 'level','img','tag' )
-        # level = Courese.LEVEL_CHOICES
+        print(courses)
+        print(paginator)
+        page = request.GET.get('page')
         try:
             contacts = paginator.page(page)
         except PageNotAnInteger:
@@ -114,22 +105,17 @@ class CouresList(View):
             contacts = paginator.page(1)
         except EmptyPage:
             contacts = paginator.page(paginator.num_pages)
+        coures_dict = {'contacts':contacts,'coures_tag':coures_tag}
         # 格式是bootstrap-table要求的格式
-        return render(request,'courses/index.html',{'contacts':contacts,'coures_tag':coures_tag,'coures_level':coures_level})
+        return render(request,'courses/index2.html',coures_dict)
 
-    # def get(self,request):
-    #     coureses_list = Courese.objects.values("level","tag")
-    #     paginator = Paginator(coureses_list,15)
-    #     page = int(request.GET.get("page", 1))
-    #     category = int(request.GET.get("category_list",0))
-    #     level = int(request.GET.get("level",0))
-    #     if category:coureses_list = coureses_list.filter(tag=category)
-    #     if level:coureses_list = coureses_list.filter(level=level)
-    #
-    #
-    #     print(category)
-    #     tag = Courese.LEVEL_CHOICES
-    #     search = request.GET.get("search","")
-    #     kwgs = {"category":category,"search":search,"tag":tag,"level":level}
-    #
-    #     return JsonResponse(kwgs)
+
+from django.db.models import Q
+class CoureseSearch(View):
+    def get(self,request):
+        search = request.GET.get("search")
+        courese_list = Courese.objects.filter()
+        if search:
+            courese_list = courese_list.filter(Q(courese_name=search)|Q(content=search))
+        print(courese_list)
+        return render(request,'courses/index.html',{'courese_list':courese_list})

@@ -78,9 +78,9 @@
                   </div>
                   {% endif %}
         </ul>
-        <form class="navbar-form navbar-right" action="search" method="get" role="search">
+        <form class="navbar-form navbar-right" action="search" method="get" role="search"  >
                 <div class="form-group">
-                    <input type="text" class="form-control" name="search" autocomplete="off" placeholder="搜索 课程/问答">
+                    <input type="text" class="form-control" id="search" name="search" autocomplete="off" placeholder="搜索课程" href="{% url 'apis:CoureseSearch' %}" >
                 </div>
             </form>
 
