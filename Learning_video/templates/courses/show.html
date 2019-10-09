@@ -137,13 +137,13 @@
 
     <li>
 
-    <a href="/courses/?tag=Linux">Linux</a>
+    <a href="/courses/?tag={{ Courese_name.tag }}">{{ Courese_name.tag }}</a>
 
     </li>
 
     <li class="active">
-        <a href="/courses/1">
-        Linux 基础入门（新版）
+        <a href="/courses/{{ Courese_name.id }}">
+        {{ Courese_name }}
         </a>
     </li>
 </ol>
@@ -177,14 +177,13 @@
         <div class="clearfix course-infobox-header">
             <h4 class="pull-left course-infobox-title">
 
-                <span>Linux 基础入门（新版）</span>
+                <span>{{ Courese_name }}</span>
 
             </h4>
             <div class="pull-right course-infobox-follow"
                 data-follow-url="/courses/1/follow"
                 data-unfollow-url="/courses/1/unfollow">
-                <span class="course-infobox-followers">4401</span>
-                <span>人关注</span>
+
 
                 <i class="fa fa-star-o" data-next="/login?next=%2Fcourses%2F1"></i>
 
@@ -192,57 +191,14 @@
         </div>
         <div class="clearfix course-infobox-body">
             <div class="course-infobox-content">
-            <p>要在实验楼愉快地学习，先要熟练地使用 Linux，本实验介绍 Linux 基本操作，shell 环境下的常用命令。</p>
 
             </div>
 
-            <div class="course-infobox-progress">
-
-
-
-                    <div class="course-progress-new"></div>
-
-
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                    <div class="course-progress-new"></div>
-
-                <span>（0/17）</span>
-            </div>
             <video id="my_video_1" class="video-js vjs-default-skin" width="640px" height="267px"
       controls preload="none" poster='http://video-js.zencoder.com/oceans-clip.jpg'
       data-setup='{ "aspectRatio":"640:267", "playbackRates": [1,1.25,1.5,1.75,2] }'>
-    <source src="http://v.itheima.com/python/懂中文就能学会python/01linux/01-课程安排.mp4" type='video/mp4' />
-    <source src="http://v.itheima.com/python/懂中文就能学会python/01linux/01-课程安排.mp4" type='video/webm' />
+    <source src="http://v.itheima.com/da/Java%E5%AD%A6%E7%A7%91/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5Java%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/3%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2_%E5%8E%86%E7%BB%8F5%E5%B9%B4%E9%94%A4%E7%82%BC%28%E5%8F%B2%E4%B8%8A%E6%9C%80%E9%80%82%E5%90%88%E5%88%9D%E5%AD%A6%E8%80%85%E5%85%A5%E9%97%A8%E7%9A%84Java%E5%9F%BA%E7%A1%80%E8%A7%86%E9%A2%91%29-%E6%AF%95%E8%80%81%E5%B8%88/JavaSE%E5%9F%BA%E7%A1%80%E8%A7%86%E9%A2%9101/01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0.mp4" type='video/mp4' />
+    <source src="http://v.itheima.com/da/Java%E5%AD%A6%E7%A7%91/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5Java%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/3%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2_%E5%8E%86%E7%BB%8F5%E5%B9%B4%E9%94%A4%E7%82%BC%28%E5%8F%B2%E4%B8%8A%E6%9C%80%E9%80%82%E5%90%88%E5%88%9D%E5%AD%A6%E8%80%85%E5%85%A5%E9%97%A8%E7%9A%84Java%E5%9F%BA%E7%A1%80%E8%A7%86%E9%A2%91%29-%E6%AF%95%E8%80%81%E5%B8%88/JavaSE%E5%9F%BA%E7%A1%80%E8%A7%86%E9%A2%9101/01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0.mp4" type='video/webm' />
   </video>
 
 
@@ -255,27 +211,13 @@
 
         </div>
 
-        <div class="clearfix course-infobox-footer">
-
-            <div class="pull-right course-infobox-learned">85243 人学过</div>
-        </div>
 
     </div>
     <div class="content">
         <ul class="nav nav-tabs" role="tablist">
 
             <li role="presentation" class="active">
-                <a href="#labs" aria-controls="labs" role="tab" data-toggle="tab">实验列表</a>
-            </li>
-
-            <li role="presentation">
-                <a href="#comments" class="stat-event" aria-controls="comments" role="tab" data-stat="course_comment" data-toggle="tab">课程评论(1194)</a>
-            </li>
-            <li role="presentation">
-                <a href="#reports" class="stat-event" data-stat="course_report" aria-controls="reports" role="tab" data-toggle="tab">实验报告(3417)</a>
-            </li>
-            <li role="presentation">
-                <a href="#questions" class="stat-event" data-stat="course_question" aria-controls="questions" role="tab" data-toggle="tab">实验问答(1108)</a>
+                <a href="#labs" aria-controls="labs" role="tab" data-toggle="tab">课程列表</a>
             </li>
         </ul>
         <div class="tab-content">
@@ -286,39 +228,22 @@
 
 
 
-    <div class="lab-item ">
+
+{#                <a class="btn btn-default" href="#sign-modal" data-toggle="modal" data-sign="signin" data-next="/courses/1">查看文档</a>#}
+{#                <a class="btn btn-primary" href="#sign-modal" data-toggle="modal" data-sign="signin" data-next="/courses/1">开始实验</a>#}
+    {% for i in Courese_list %}
+                <div class="lab-item ">
     <div class="lab-item-status">
 
             <img src="{% static 'img/lab-not-ok.png' %}">
 
     </div>
-    <div class="lab-item-index">第1节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux 系统简介">Linux 系统简介</div>
+    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="{{ i.text }}" onclick="function f() {
+
+      print(hao)
+    }">{{ i.text }}</div>
     <div class="pull-right lab-item-ctrl">
 
-
-
-
-                <a class="btn btn-default" href="#sign-modal" data-toggle="modal" data-sign="signin" data-next="/courses/1">查看文档</a>
-                <a class="btn btn-primary" href="#sign-modal" data-toggle="modal" data-sign="signin" data-next="/courses/1">开始实验</a>
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第2节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="基本概念及操作">基本概念及操作</div>
-    <div class="pull-right lab-item-ctrl">
 
 
 
@@ -327,390 +252,9 @@
 
     </div>
 </div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第3节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="用户及文件权限管理">用户及文件权限管理</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第4节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux 目录结构及文件基本操作">Linux 目录结构及文件基本操作</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第5节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="环境变量与文件查找">环境变量与文件查找</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第6节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="文件打包与解压缩">文件打包与解压缩</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第7节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="文件系统操作与磁盘管理">文件系统操作与磁盘管理</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第8节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux下的帮助命令">Linux下的帮助命令</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第9节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux任务计划crontab">Linux任务计划crontab</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第10节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="命令执行顺序控制与管道">命令执行顺序控制与管道</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第11节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="简单的文本处理">简单的文本处理</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第12节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="数据流重定向">数据流重定向</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第13节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="正则表达式基础">正则表达式基础</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第14节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux下软件安装">Linux下软件安装</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第15节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux 进程概念">Linux 进程概念</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第16节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux 进程管理">Linux 进程管理</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
-
-
-    <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-index">第17节</div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="Linux 日志系统">Linux 日志系统</div>
-    <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-    </div>
-</div>
-
-
+    {% endfor %}
             </div>
-            <div role="tabpanel" class="tab-pane course-comment" id="comments">
-                <div class="comment-box">
-                    <div class="comment-form">
 
-                            <div class="comment-form-unlogin">
-                                请
-                                <a href="#sign-modal" data-toggle="modal" data-sign="signin" data-next="/courses/1"> 登录 </a>
-                                后发表评论
-                            </div>
-
-                    </div>
-                    <div class="comment-title">最新评论</div>
-                    <div class="comment-list">
-                    </div>
-                    <div class="pagination-container"></div>
-                </div>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="reports">
-				<span class="lab-id active" data-lab-id="None">全部</span>
-
-				<span class="lab-id" data-lab-id="1">第1节</span>
-
-				<span class="lab-id" data-lab-id="2">第2节</span>
-
-				<span class="lab-id" data-lab-id="3">第3节</span>
-
-				<span class="lab-id" data-lab-id="59">第4节</span>
-
-				<span class="lab-id" data-lab-id="60">第5节</span>
-
-				<span class="lab-id" data-lab-id="61">第6节</span>
-
-				<span class="lab-id" data-lab-id="62">第7节</span>
-
-				<span class="lab-id" data-lab-id="1917">第8节</span>
-
-				<span class="lab-id" data-lab-id="1918">第9节</span>
-
-				<span class="lab-id" data-lab-id="63">第10节</span>
-
-				<span class="lab-id" data-lab-id="337">第11节</span>
-
-				<span class="lab-id" data-lab-id="346">第12节</span>
-
-				<span class="lab-id" data-lab-id="354">第13节</span>
-
-				<span class="lab-id" data-lab-id="356">第14节</span>
-
-				<span class="lab-id" data-lab-id="1943">第15节</span>
-
-				<span class="lab-id" data-lab-id="1944">第16节</span>
-
-				<span class="lab-id" data-lab-id="1945">第17节</span>
-
-                <div class="report-owner">
-                    <span class="owner-list" data-user-id="">我的报告</span> / <span class="owner-list active" data-user-id="None">所有报告</span>
-                </div>
-                <div class="row report-items"></div>
-                <div class="pagination-container"></div>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="questions">
-                <a class="btn btn-success" data-toggle="modal" data-target="#askquestion">我要提问</a>
-                <hr>
-                <ul class="row question-items"></ul>
-                <div class="pagination-container"></div>
-            </div>
         </div>
     </div>
 
@@ -777,3 +321,6 @@
     </body>
     </html>
 {% endblock content %}
+<script>
+
+</script>

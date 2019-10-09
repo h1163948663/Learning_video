@@ -39,7 +39,8 @@ class Courese(models.Model):
     content = RichTextUploadingField("课程描述",null=True, )
     img = models.ImageField("图片",upload_to="avator/%Y%m%d/", default="avator/default.jpg",)
     tag = models.ForeignKey(Category,verbose_name="标签",null=True,)
-    user = models.ForeignKey(User,verbose_name="观看用户",)
+    #user = models.ForeignKey(User,verbose_name="观看用户",)
+    id = models.IntegerField("编号",primary_key=True)
     class Meta:
         verbose_name = "课程大纲"
         verbose_name_plural = verbose_name

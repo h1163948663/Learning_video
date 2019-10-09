@@ -86,7 +86,6 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 class CouresList(View):
     def get(self,request):
 
-
         tag = request.GET.get("tag")
         courses = 0
         if tag:
