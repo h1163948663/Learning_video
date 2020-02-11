@@ -26,14 +26,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6 col-sm-3 col-md-2 footer-col">
+            <!--<div class="col-xs-6 col-sm-3 col-md-2 footer-col">
                 <div class="col-title">公司</div>
                 <a href="privacy/index.html" target="_blank">关于我们</a><br>
                 <a href="privacy/index.html" target="_blank">联系我们</a><br>
                 <a href="http://www.htmlsucai.com" target="_blank">加入我们</a><br>
                 <a href="https://blog.shiyanlou.com" target="_blank">技术博客</a><br>
-            </div>
-            <div class="col-xs-6 col-sm-3 col-md-2 footer-col">
+            </div>-->
+            <!--<div class="col-xs-6 col-sm-3 col-md-2 footer-col">
                 <div class="col-title">合作</div>
                 <a href="privacy/index.html" target="_blank">我要投稿</a><br>
                 <a href="labs/index.html" target="_blank">教师合作</a><br>
@@ -47,22 +47,22 @@
                 <a href="courses/reports.html" target="_blank">实验报告</a><br>
                 <a href="questions/index.html?tag=%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank">常见问题</a><br>
                 <a href="privacy/index.html" target="_blank">隐私条款</a>
-            </div>
+            </div>-->
             <div class="col-xs-6 col-sm-3 col-md-2 footer-col">
                 <div class="col-title">学习路径</div>
-                <a href="paths/index.html" target="_blank">Python学习路径</a><br>
-                <a href="paths/index.html" target="_blank">Linux学习路径</a><br>
-                <a href="paths/index.html" target="_blank">大数据学习路径</a><br>
-                <a href="paths/index.html" target="_blank">Java学习路径</a><br>
-                <a href="paths/index.html" target="_blank">PHP学习路径</a><br>
-                <a href="paths/index.html" ,="" target="_blank">全部</a>
+                <a href="{% url 'apis:CouresList' %}?tag=Python" target="_blank">Python学习路径</a><br>
+                <a href="{% url 'apis:CouresList' %}?tag=Linux" target="_blank">Linux学习路径</a><br>
+                <a href="{% url 'apis:CouresList' %}?tag=大数据" target="_blank">大数据学习路径</a><br>
+                <a href="{% url 'apis:CouresList' %}?tag=Java" target="_blank">Java学习路径</a><br>
+                <a href="{% url 'apis:CouresList' %}?tag=PHP" target="_blank">PHP学习路径</a><br>
+                <a href="{% url 'apis:CouresList' %}?tag=all" target="_blank">全部</a>
             </div>
         </div>
     </div>
-    <div class="text-center copyright">
-        <span>Copyright @2013-2016 实验楼在线教育</span>
-        <span class="ver-line"> | </span>
-        <a href="http://www.htmlsucai.com" target="_blank">蜀ICP备13019762号</a>
+    <!--<div class="text-center copyright">
+{#        <span>Copyright @2013-2016 实验楼在线教育</span>#}
+{#        <span class="ver-line"> | </span>#}
+{#        <a href="http://www.htmlsucai.com" target="_blank">蜀ICP备13019762号</a>#}
         <script type="text/javascript">
             var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
             document.write(unescape("%3Cspan id='cnzz_stat_icon_5902315'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D5902315' type='text/javascript'%3E%3C/script%3E"));
@@ -84,5 +84,5 @@
         ga('create', 'UA-89338452-1', 'auto');
         ga('send', 'pageview');
         </script>
-    </div>
+    </div>-->
 </div>

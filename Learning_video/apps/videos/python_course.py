@@ -1,5 +1,4 @@
 import requests
-from lxml import etree
 import os
 import sqlite3
 from django.conf import settings
@@ -13,96 +12,65 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'Learning_video.settings'
 # # 加载项目配置
 
 db_path = os.path.join(settings.BASE_DIR,'db.sqlite3')
-print(db_path)
+
 conn = sqlite3.connect(db_path)
-# conn.execute('''CREATE TABLE
-#       (ID            INTEGER    PRIMARY KEY  AUTOINCREMENT   NOT NULL,
-#        coure_id    INTEGER                                  NULL,
-#        data        VACHER                                   NULL,
-#        title       VACHER                                   NULL)
-#        ''')
-# conn.execute('''CREATE TABLE COURESE_VIDEO
-#       (ID            INTEGER    PRIMARY KEY  AUTOINCREMENT   NOT NULL,
-#        courese_name    VACHER                                  NOT NULL,
-#        TAG            VACHER                                   NULL,
-#        NUM            INT                                  NOT NULL,
-#        IMG            VACHER                                    NOT NULL)
-# ''')
-j = 1
-for s in range(1,4):
-    url = f'http://yun.itheima.com/course/index/p/{s}.html'
 
-    # headers = {
-    #     "Accept": "text / html, application / xhtml + xml, application / xml;q = 0.9, image / webp, image / apng, * / *;q = 0.8, application / signed - exchange;v = b3",
-    #     "Cookie": "isclose = 1;isclose = 1;bad_id48bc7230 - 6252 - 11e8 - 917f - 9fb8db4dc43c = 07d0a622 - af80 - 11e9 - 8b58 - d38319d565ab;bad_idd48d5cf0 - 2e47 - 11e8 - 9db3 - 3313a60c92e9 = 1bf50d32 - af80 - 11e9 - 8b58 - d38319d565ab;bad_id994d4130 - 1df9 - 11e9 - b7ec - 7766c2691ec6 = 7f28e971 - be8b - 11e9 - ae45 - 0f2733d23281;nice_id48bc7230 - 6252 - 11e8 - 917f - 9fb8db4dc43c = f08eec01 - c263 - 11e9 - b0d0 - 2b2b8052cd76;openChat48bc7230 - 6252 - 11e8 - 917f - 9fb8db4dc43c = true;PHPSESSID = 9u9jsh7pbqhpod2jomv25b4dr3;href = http % 3A % 2F % 2Fyun.itheima.com % 2Fmap % 2F22.html % 3Fa5;accessId = 994d4130 - 1df9 - 11e9 - b7ec - 7766c2691ec6;nice_id994d4130 - 1df9 - 11e9 - b7ec - 7766c2691ec6 = 472e3701 - c264 - 11e9 - 8390 - 4da302bf9563;nice_idd48d5cf0 - 2e47 - 11e8 - 9db3 - 3313a60c92e9 = 3dc58ec1 - c417 - 11e9 - b046 - 17a192948105;openChatd48d5cf0 - 2e47 - 11e8 - 9db3 - 3313a60c92e9 = true;isclose = 1;qimo_seosource_994d4130 - 1df9 - 11e9 - b7ec - 7766c2691ec6 = % E7 % AB % 99 % E5 % 86 % 85;qimo_seokeywords_994d4130 - 1df9 - 11e9 - b7ec - 7766c2691ec6 =;pageViewNum = 48",
-    #     "User - Agent" :"Mozilla / 5.0(Windows NT 10.0;Win64;x64) AppleWebKit / 537.36(KHTML, likeGecko) Chrome / 76.0.3809.100Safari / 537.36"
-    # }
-
-    response = requests.get(url,)
-    # print(response)
-    html_str = response.content.decode()
-    html = etree.HTML(html_str)
-    one = html.xpath('//div[@class="main"]/ul//li')
-    # print(one)
-    for i in one:
-        img = i.xpath('.//img[@class="mask_img1"]/@src')[0]
-        img = img.replace("/Upload/./","http://yun.itheima.com/Upload/")
-        print(img)
-        lianjie = i.xpath('./a/@href')[0]
-        a = lianjie.replace("","http://yun.itheima.com",1)
-        print(a)
-        url = i.xpath('./a/@href')[0].replace("/course/","http://yun.itheima.com/course/")
+import threading
+import requests
+from lxml import etree
+import time
+def get_src():
+    for i in range(7,9):
+        url = url = f'http://yun.itheima.com/course/index/p/{i}.html'
         response = requests.get(url)
-
         html_str = response.content.decode()
         html = etree.HTML(html_str)
-        video = set(html.xpath('//ul/li/a/@data'))
+        course = html.xpath('//div[@class="main"]/ul//li')
+        s = 1
+        for j in course:
+            img = j.xpath('.//img[@class="mask_img1"]/@src')[0]
+            img = img.replace("/Upload/./", "http://yun.itheima.com/Upload/")
+            print(img)
+            title = j.xpath('.//h2/text()')[0].replace("|黑马程序员","")
+            tag =title.split("】")[0].split("【")[1]
+            print(tag)
+            print(title.split("】")[1])
+            course_url = j.xpath('./a/@href')[0]
+            course_url = 'http://yun.itheima.com'+ str(course_url)
+            print(course_url)
+            response = requests.get(course_url)
+            html_str = response.content.decode()
+            video_html = etree.HTML(html_str)
+            video = video_html.xpath('//div[@class="main"]//li')
+            num = 0
+            for k in video:
+                video_title = k.xpath('./a/text()')[0]
+                print(video_title)
+                video_url = k.xpath('./a/@data')[0]
+                print(video_url)
+                if video_url != '':
+                    data1 = "insert into videos_allcoureslist(link,title) values('%s','%s')" %(video_url,video_title)
+                    conn.execute(data1)
+                    conn.commit()
+                    num += 1
+            data2 = "insert into videos_courese(courese_name,img,num)values('%s','%s','%d')" % (title,img,num)
+            conn.execute(data2)
+            conn.commit()
+            #             conn.execute(data)
+            print(len(video))
+    conn.close()
+def main():
+    add_thread = 'add_thread'
+    starttime = time.time()
+    print(time.ctime())
 
-        title = sorted(set(html.xpath('//div[@class="main"]//li/a/text()')))
-        # title = sorted(title)
+    # for i in range(5):
+    #     i = threading.Thread(target=get_src())
+    #     i.start()
+    get_src()
+    endtime = time.time()
+    print(time.ctime())
+    print(endtime-starttime)
 
-        title.remove("开始学习")
-
-        video = sorted(video)
-
-        """for temp in range(0,len(video)):
-            print(video[temp],title[temp])
-
-            data = "insert into videos_allcoureslist(link,text,coure_id_id)values('%s','%s','%d')"% (video[temp],title[temp],j)
-
-            conn.execute(data)
-            print("插入数据完成")
-
-        j += 1
-        """
-
-
-        # print(s)
-        # print(url)
-        name = i.xpath('.//h2/text()')[0].replace("|黑马程序员","")
-        print(name)
-        # conn = sqlite3.connect(db_path)
-        num = int(len(title))
-        print(num,type(num))
-        data = "insert into videos_courese(courese_name,num,img)values('%s','%d','%s')" % (name,num,img)
-        conn.execute(data)
-        # print("插入课程完成")
-# data = "insert into Course details(data,text)values('%s','%s')" % (videos['data'], videos['text'])
-
-# conn.execute('''CREATE TABLE python_coures
-#       (ID       INTEGER PRIMARY KEY  AUTOINCREMENT   NOT NULL,
-#        data     TEXT                       NOT NULL,
-#        text     TEXT                       NOT NULL)''')
-
-# video = html.xpath('//li[@class="click "]')
-# print(video)
-# j = 1
-# for i in video:
-#     videos = {}
-#     videos["data"] = i.xpath(f'//a[@class="chapter cur{j} a_world"]/@data')[0]
-#     videos["text"] = i.xpath(f'//a[@class="chapter cur{j} a_world"]/text()')[0]
-#     j = j + 1
-#     print(videos)
-print("完成")
-conn.commit()
-conn.close()
+if __name__ =='__main__':
+    main()

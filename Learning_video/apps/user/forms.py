@@ -5,12 +5,10 @@ from django.contrib.auth.hashers import check_password as auth_check_password
 from .models import User
 
 
-# 用户注册
 class RegisterForm(forms.ModelForm):
     password2 = forms.CharField(label="密 码2",
                                 widget=widgets.PasswordInput(attrs={"class": "login_txtbx", "placeholder": "请再输入密码",}))
-    mobile_captcha = forms.CharField(label="验证码", widget=widgets.TextInput(
-                                attrs={"class":"login_txtbx","placeholder": "验证码","style":"width:100%" ,"error_messages": {"invalid": "验证码错误"}}))
+    mobile_captcha = forms.CharField(label="验证码", widget=widgets.TextInput(attrs={"class":"login_txtbx","placeholder": "验证码","style":"width:100%" ,"error_messages": {"invalid": "验证码错误"}}))
 
     class Meta:
         model = User
@@ -47,7 +45,7 @@ class RegisterForm(forms.ModelForm):
             raise ValidationError("两次密码不一致")
 
 
-
+from django.http import JsonResponse
 #用户登入
 class LoginForm(forms.Form):
     username = forms.CharField(label="用户名", max_length="24",
@@ -72,7 +70,7 @@ class LoginForm(forms.Form):
             return None, False
 
     def clean_username(self):
-        print(self.cleaned_data.get("username"))
+        #print(self.cleaned_data.get("username"))
         ret = User.objects.filter(username=self.cleaned_data.get("username"))
         if ret:
             return self.cleaned_data.get("username")

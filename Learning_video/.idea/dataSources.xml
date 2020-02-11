@@ -19,11 +19,11 @@
         <property name="enable_load_extension" value="true" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="db" uuid="a4673e0e-93c5-4036-b1bc-8eca56621c1e">
+    <data-source source="LOCAL" name="db [2]" uuid="51da8fe5-9a1b-47b8-b9cf-4db6b8d7d598">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:D:\Learning_video\Learning_video\db.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\吴豪\Desktop\绿色的在线教育平台网站响应式模板\Learning_video\Learning_video\db.sqlite3</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>

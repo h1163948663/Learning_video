@@ -1,178 +1,38 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load video_class %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="zh-CN">
 {% block content %}
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Lei Shi">
-        <meta http-equiv="Cache-Control" content="o-transform">
-        <meta http-equiv="Cache-Control" content="no-siteapp">
-        <meta name="csrf-token" content="1483780974##87f89328c5616669f00302a263fe9061bb852818">
 
-          <link href="https://vjs.zencdn.net/7.6.0/video-js.css" rel="stylesheet">
+<title>{{ Courese_name }}-课程-学习社</title>
+<body>
+<link href="https://vjs.zencdn.net/7.6.0/video-js.css" rel="stylesheet">
+<link  rel="stylesheet" href="{% static 'comment/css/main.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'comment/css/sinaFaceAndEffec.css' %}" />
 
-  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
-  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-
-        <title> {{ object.courese_name }} - 学习社</title>
-
-
-
-        <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" href="{% static 'font-awesome/4.7.0/css/font-awesome.min.css' %}">
-        <link rel="stylesheet" href="{% static 'highlight.js/9.8.0/monokai-sublime.min.css' %}">
-        <link rel="stylesheet" href="{% static 'app/css/libs/bootstrap/3.3.7/css/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'app/css/libs/katex/0.6.0/katex.min.css' %}">
-        <link rel="stylesheet" href="{% static 'app/css/libs/videojs/5.11.7/video-js.min.css' %}">
-        <link rel="stylesheet" href="{% static 'app/css/dest/styles.css' %}?=2016121272249">
-
-        <style>
-            @font-face {
-                font-family: "lantingxihei";
-                src: url("{% static 'fonts/FZLTCXHJW.TTF' %}");
-            }
-
-            /* modal 模态框*/
-            #invite-user .modal-body {
-                overflow: hidden;
-            }
-
-            #invite-user .modal-body .form-label {
-                margin-bottom: 16px;
-                font-size: 14px;
-            }
-
-            #invite-user .modal-body .form-invite {
-                width: 80%;
-                padding: 6px 12px;
-                background-color: #eeeeee;
-                border: 1px solid #cccccc;
-                border-radius: 5px;
-                float: left;
-                margin-right: 10px;
-            }
-
-            #invite-user .modal-body .msg-modal-style {
-                background-color: #7dd383;
-                margin-top: 10px;
-                padding: 6px 0;
-                text-align: center;
-                width: 100%;
-            }
-
-            #invite-user .modal-body .modal-flash {
-                position: absolute;
-                top: 53px;
-                right: 74px;
-                z-index: 999;
-            }
-
-            /* end modal */
-
-            .en-footer {
-                padding: 30px;
-                text-align: center;
-                font-size: 14px;
-            }
-        </style>
-        <link rel="stylesheet" href="{% static 'restatic/js/libs/marked/katex/katex.min.css' %}">
-        <style>
-            .bootcamp-infobox {
-                margin: 50px 0 0;
-            }
-
-            .invite-friends-link {
-                margin-top: 10px;
-                padding-left: 8px;
-            }
-
-            .invite-friends-link input {
-                margin-left: -5px;
-            }
-
-            .invite-friends-link button {
-                float: left;
-                margin-top: 5px;
-                margin-left: -5px;
-            }
-
-            .invite-friends-link .copy-msg {
-                float: left;
-                margin-top: 10px;
-                margin-left: 20px;
-                color: #42b1ad;
-            }
-
-            p.join-vip-faq {
-                margin-top: 20px;
-                margin-bottom: -50px;
-                font-size: 13px;
-            }
-
-            p.join-vip-faq img {
-                height: 13px;
-                width: 13px;
-                margin-top: -2px;
-            }
-
-            a.vip-without-bean {
-                font-size: 18px;
-                line-height: 30px;
-            }
-        </style>
-
-
-    </head>
-
-    <body>
 
 
 <div class="container layout layout-margin-top">
 
 <ol class="breadcrumb">
-    <li><a href="/courses/">全部课程</a></li>
+    <li><a href="{% url  'apis:CouresList' %}?tag=all">全部课程</a></li>
 
     <li>
 
-    <a href="/courses/?tag={{ Courese_name.tag }}">{{ Courese_name.tag }}</a>
+    <a href="{% url 'apis:CouresList' %}?tag={{ Courese_name.tag }}">{{ Courese_name.tag }}</a>
 
     </li>
 
     <li class="active">
-        <a href="/courses/{{ Courese_name.id }}">
+        <a href="/courese/{{ Courese_name.id }}">
         {{ Courese_name }}
         </a>
     </li>
 </ol>
 
-    <div class="row">
-        <div class="col-md-9 layout-body">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="side-image side-image-mobile">
-        <img src="https://dn-simplecloud.shiyanlou.com/ncn1.jpg?imageView2/0/h/300">
-    </div>
     <div class="content course-infobox">
         <div class="clearfix course-infobox-header">
             <h4 class="pull-left course-infobox-title">
@@ -180,93 +40,84 @@
                 <span>{{ Courese_name }}</span>
 
             </h4>
-            <div class="pull-right course-infobox-follow"
-                data-follow-url="/courses/1/follow"
-                data-unfollow-url="/courses/1/unfollow">
 
-
-                <i class="fa fa-star-o" data-next="/login?next=%2Fcourses%2F1"></i>
-
-            </div>
         </div>
-        <div class="clearfix course-infobox-body">
-            <div class="course-infobox-content">
-
-            </div>
-
-            <video id="my_video_1" class="video-js vjs-default-skin" width="640px" height="267px"
-      controls preload="none" poster='http://video-js.zencoder.com/oceans-clip.jpg'
-      data-setup='{ "aspectRatio":"640:267", "playbackRates": [1,1.25,1.5,1.75,2] }'>
-    <source src="http://v.itheima.com/da/Java%E5%AD%A6%E7%A7%91/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5Java%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/3%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2_%E5%8E%86%E7%BB%8F5%E5%B9%B4%E9%94%A4%E7%82%BC%28%E5%8F%B2%E4%B8%8A%E6%9C%80%E9%80%82%E5%90%88%E5%88%9D%E5%AD%A6%E8%80%85%E5%85%A5%E9%97%A8%E7%9A%84Java%E5%9F%BA%E7%A1%80%E8%A7%86%E9%A2%91%29-%E6%AF%95%E8%80%81%E5%B8%88/JavaSE%E5%9F%BA%E7%A1%80%E8%A7%86%E9%A2%9101/01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0.mp4" type='video/mp4' />
-    <source src="http://v.itheima.com/da/Java%E5%AD%A6%E7%A7%91/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5Java%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/3%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2_%E5%8E%86%E7%BB%8F5%E5%B9%B4%E9%94%A4%E7%82%BC%28%E5%8F%B2%E4%B8%8A%E6%9C%80%E9%80%82%E5%90%88%E5%88%9D%E5%AD%A6%E8%80%85%E5%85%A5%E9%97%A8%E7%9A%84Java%E5%9F%BA%E7%A1%80%E8%A7%86%E9%A2%91%29-%E6%AF%95%E8%80%81%E5%B8%88/JavaSE%E5%9F%BA%E7%A1%80%E8%A7%86%E9%A2%9101/01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0.mp4" type='video/webm' />
-  </video>
-
-
-
-
-                <div class="pull-right course-infobox-price">
-
-                </div>
+    <div class="clearfix course-infobox-body">
+        <div class="course-infobox-content"></div>
+        {% csrf_token %}
+    <video id="my_video_1"  class="video-js vjs-default-skin" width="640px" height="267px"
+      controls preload="auto"
+      data-setup='{ "aspectRatio":"640:267", "playbackRates": [1,1.25,1.5,1.75,2] }'
+      src="{{ Courese_list_first.link }}">
+    <source id="video"  video_id="{{ Courese_list_first.id }}" src="{{ Courese_list_first.link }}"  type='video/mp4' />
+    <source id="video1"    src="{{ Courese_list_first.link }}" type='video/webm' />
+    </video>
+        <div>
 
 
         </div>
-
-
     </div>
+
     <div class="content">
         <ul class="nav nav-tabs" role="tablist">
 
             <li role="presentation" class="active">
-                <a href="#labs" aria-controls="labs" role="tab" data-toggle="tab">课程列表</a>
+                <a href="#labs" aria-controls="labs" role="tab" data-toggle="tab" aria-expanded="true">实验列表</a>
             </li>
+
+            <li role="presentation"  id="li_comment" class="">
+                <a href="#comments" class="stat-event" aria-controls="comments" role="tab" data-stat="course_comment" data-toggle="tab" aria-expanded="false" id="id_comment_label">课程评论</a>
+            </li>
+
         </ul>
         <div class="tab-content">
-
             <div role="tabpanel" class="tab-pane active" id="labs">
+                {% for i in Courese_list %}
+                <div class="lab-item "  >
 
-
-
-
-
-
-{#                <a class="btn btn-default" href="#sign-modal" data-toggle="modal" data-sign="signin" data-next="/courses/1">查看文档</a>#}
-{#                <a class="btn btn-primary" href="#sign-modal" data-toggle="modal" data-sign="signin" data-next="/courses/1">开始实验</a>#}
-    {% for i in Courese_list %}
-                <div class="lab-item ">
-    <div class="lab-item-status">
-
-            <img src="{% static 'img/lab-not-ok.png' %}">
-
-    </div>
-    <div class="lab-item-title" data-toggle="tooltip" data-placement="bottom" title="{{ i.text }}" onclick="function f() {
-
-      print(hao)
-    }">{{ i.text }}</div>
+    <div  class="lab-item-title"  data-toggle="tooltip"  data-placement="bottom"  data-original-title="{{ i.title }}"  href="{{ i.link }}" id="t{{ i.id }}">{{ i.title }}</div>
     <div class="pull-right lab-item-ctrl">
-
-
-
-
-
-
-
+                <a class="btn btn-primary"   type="submit"  id="a{{ i.id }}" >开始学习</a>
     </div>
 </div>
-    {% endfor %}
+                {% endfor %}
             </div>
+            <div role="tabpanel" class="tab-pane course-comment"  id="comments" >
+                <div style="display:inline-block;*display:none;*zoom:1;width: 100%; height: 100%;" >
+                <form class="cont-box form" id="comment_form" method="POST" action="{% url 'comment:submit_comment' Courese_list_first.id  %}">
+                    {% csrf_token %}
+               {{ form.content }}
+				<div class="tools-box">
+					<div class="operator-box-btn"><span class="face-icon"  >☺</span></div>
+					<div class="submit-btn" style="height: 100%"><input type="button"  value="提交评论" id="comment_submit"/></div>
+				</div>
+                </form>
 
+                    <div id="info-show" style="margin-top: 40px">
+                    </div>
+                    </div>
+
+
+
+<script type="text/javascript" src="{% static 'comment/js/main.js' %}"></script>
+<script type="text/javascript" src="{% static 'comment/js/sinaFaceAndEffec.js' %}"></script>
+<script type="text/javascript" src="{% static 'comment/js/jquery-1.8.3.min.js' %}"></script>
+            </div>
         </div>
-    </div>
-
-
+        </div>
+        </div>
         </div>
 
-        </div>
-    </div>
+    <div id="base-data"
+data-flash="false"
+        data-is-login=false
+        data-is-jwt=true
+        data-msg-user=""
+        data-msg-system=""
+    ></div>
 
-
-
-    <script src="{% static 'app/dest/lib/lib.js' %}?=2016121272249"></script>
+    <script type="text/javascript" src="{% static 'comment/js/jquery-1.8.3.min.js' %}"></script>
+    <script src="{% static 'app/dest/lib/lib.js' %}"></script>
     <script src="{% static 'jquery/2.2.4/jquery.min.js' %}"></script>
     <script src="{% static 'ace/1.2.5/ace.js' %}"></script>
     <script src="{% static 'aliyun/aliyun-oss-sdk-4.3.0.min.js' %}"></script>
@@ -279,45 +130,97 @@
     <script src="{% static 'bootstrap-table/1.11.0/bootstrap-table.min.js' %}"></script>
     <script src="{% static 'bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js' %}"></script>
     <script src="{% static 'bootstrap-table/1.11.0/extensions/filter-control/bootstrap-table-filter-control.min.js' %}"></script>
-
+    <script src="{% static 'app/dest/course/labs.js' %}"></script>
+    <script type="text/javascript" src="{% static 'comment/js/main.js' %}"></script>
+    <script type="text/javascript" src="{% static 'comment/js/sinaFaceAndEffec.js' %}"></script>
     <script src="{% static 'ravenjs/3.7.0/raven.min.js' %}"></script>
+    <script type="text/javascript">
+	// 绑定表情
+	$('.face-icon').SinaEmotion($('.text'));
+	// 测试本地解析
+	function out() {
+		var inputText = $('.text').val();
+		$('#info-show ul').append(reply(AnalyticEmotion(inputText)));
+	}
+</script>
     <script>
-        Raven.config('https://bc3878b7ed0a4468a65390bd79e6e73f@sentry.shiyanlou.com/5', {
-            release: '3.12.13'
-        }).install();
+        {% for i in Courese_list %}
+            $("#a{{ i.id }}").click(function () {
+                var video_link = $("#t{{ i.id }}").attr("href");
+                console.log('ok');
+                $.ajax({
+                    url: '/choose_video/',
+                    data: {
+                        'video_id_link':video_link,
+                        'csrfmiddlewaretoken':$('[name="csrfmiddlewaretoken"]').val()
+                    },
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function (data) {
+                        var code = data.code;
+                        if (code == 0){
+                            $("#my_video_1").attr("src","{{ i.link }}");
+                            $("#my_video_1_html5_api").attr("src","{{ i.link }}");
+                            $("#video").attr("src","{{ i.link }}");
+                            $("#video").attr("video_id","{{ i.id }}");
+                            $("#video1").attr("src","{{ i.link }}");
+                            $("#comment_form").attr("action","{% url 'comment:submit_comment' i.id  %}")
+                        }
+                    },
+                    error: function (data) {
+                        alert("切换失败")
+                    }
+                })
+            });
+        {% endfor %}
     </script>
+    <script>
 
-
-    <div id="jinja-data"
-         data-userlab-id=""
-         data-course-id="1"
-         data-is-authenticated="false"
-         data-user-joined="false"
-         data-user-logined="false"
-         data-show-student-info-modal="false"
-         data-login-url="/login?next=%2Fcourses%2F1"
-         data-start-newlab-url="/courses/clear"
-
-         data-faq="/faq"
-         data-comment-post="/courses/1/comments"
-         data-loginurl="/login?next=%2Fcourses%2F1"
-         data-site-type="0"
-         data-report-post="/courses/1/reports"
-         data-recomment-img="{% static 'img/recommentReport.png' %}"
-         data-charge-course-phone-code="/user/sms/code"
-         data-join-private-course="/courses/join"
-         data-current-user-id=""
-         data-vip-icon="{% static 'img/vip-icon.png' %}"
-         data-vip-index="/vip"
-         data-get-question-url="/courses/1/questions"
-         data-real-price=""
-
-         data-query-bill="/purchase/bill/query"
-         data-question-form="/questions/meta"
-         data-qiniu-token-url="/api/qiniu/token"
-    ></div>
-    <script src="{% static 'app/dest/course/labs.js' %}?=2016121272249"></script>
-
+    $('#comment_submit').click(function () {
+        var frm = $('#comment_form');
+        $.ajax({
+            url: frm.attr("action"),
+            data: frm.serialize(),
+            type: 'POST',
+            success: function (data) {
+            $('#info-show').prepend(data.html);
+            },
+            error: function (data) {
+                alert("error")
+            }
+        })
+    });
+    </script>
+<script>
+    $('#li_comment').click(function () {
+        $.ajax({
+            type: 'GET',
+            url: '/comment/get_comments/',
+            data:{
+                     video_id: $('#video').attr("video_id"),
+                },
+            dataType: 'json',
+            success: function(data){
+                var code = data.code;
+                var count = data.comment_count;
+                if(code == 0){
+                    $('#id_content').val("");
+                    $('#id_comment_label').text(count + "条评论");
+                    $('#info-show').append(data.html);
+                    me.resetload();
+                }else{
+                    me.lock();
+                    me.noData();
+                    me.resetload();
+                }
+            },
+            error: function(xhr, type){
+                alert("失败了");
+                me.resetload();
+                }
+            })
+    })
+</script>
     </body>
     </html>
 {% endblock content %}

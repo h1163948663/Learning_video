@@ -1,0 +1,21 @@
+{% load video_class %}
+{% load static %}
+{% load thumbnail %}
+<link rel="stylesheet" href="{% static ' css/dropload.css' %}">
+<script src="{% static 'js/dropload.min.js' %}"></script>
+{% for item in comments %}
+
+			<ul>
+<li>
+<div class="head-face">
+<img src="{{ item.avatar |thumbnail_url:'avatar' }}" >
+</div>
+<div class="reply-cont">
+<p class="username">{{ item.nickname }}</p>
+<p class="comment-body">{{ item.content }}</p>
+<p class="comment-footer">{{ item.timestamp }}</p>
+</div>
+</li>
+            </ul>
+
+{% endfor %}

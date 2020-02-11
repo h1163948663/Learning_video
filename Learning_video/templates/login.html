@@ -60,9 +60,9 @@ $(document).ready(function() {
             <p class="msg"></p>
             {% if msg %}
             <div class="alert alert-block alert-danger fade in">
-                  <button data-dismiss="alert" class="close close-sm" type="button">
+                  <!--<button data-dismiss="alert" class="close close-sm" type="button">
                       <i class="icon-remove"></i>
-                  </button>
+                  </button>-->
                   <strong>提醒!</strong> {{ msg }}
             </div>
             {% endif %}
@@ -87,10 +87,7 @@ $(document).ready(function() {
     }
     </script>
     <script>
-    // 这里在form中定义了，如果没定义可以用jquery添加事件
-    // $("#id_captcha").blur(check_captcha);
 
-    // 当失去焦点时检查验证码
     function check_captcha() {
         var captcha_code = $('#id_captcha').val();
         if (captcha_code.length == 0){
@@ -105,7 +102,7 @@ $(document).ready(function() {
                 if(data.code == 400){
                      $('.msg').html("验证码错误");
                 }else{
-                    $('.msg').html("");
+                    $('.msg').html("验证成功！");
                 }
             }
         });

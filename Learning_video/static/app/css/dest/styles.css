@@ -1192,10 +1192,10 @@ form .help-block {
 }
 
 .course-box .sign-box .course-follow {
-    display: none;
     color: #f35e69;
-    font-size: 18px;
-    margin-top: 15px
+    font-size: 20px;
+    margin-top: 15px;
+    display: block;
 }
 
 .course-box .course-img {
@@ -1226,10 +1226,10 @@ form .help-block {
     display: inline-block;
     width: 100%;
     color: #4c5157;
-    font-size: 16px;
+    font-size: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 .course-box .course-body:after {
@@ -2840,7 +2840,7 @@ form .help-block {
     vertical-align: middle
 }
 
-.question-item > .col-md-10 h4 .question-type: {
+.question-item > .col-md-10 h4 .question-type {
     font-size: 14px
 }
 
@@ -3257,7 +3257,7 @@ form .help-block {
 
 .answer-detail .comment-reply a {
     color: #565a61;
-    font-size: 12x;
+    font-size: 12px;
     margin: 0 2px
 }
 
@@ -4503,7 +4503,11 @@ i {
     font-size: 15px;
     color: #999
 }
-
+.course-infobox-follow1 {
+    font-size: 15px;
+    color: #999;
+    display: block;
+}
 .course-infobox-follow i {
     margin: 0 0 0 4px;
     font-size: 18px;
@@ -8676,7 +8680,7 @@ e .userinfo .userinfo-name:hover {
 }
 
 .lab-list a.addlab:focus, .lab-list a.addlab:hover {
-    background-color: #D9CFF1；
+    background-color: #D9CFF1;
 }
 
 .labreport-list:after {

@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load video_class %}
 {% block content %}
+    <title>欢迎来到学习社</title>
 <body>
-
+<link href="https://vjs.zencdn.net/7.6.0/video-js.css" rel="stylesheet">
 <div class="navbar-banner layout-no-margin-top">
     <div class="banner-container">
         <div class="container">
@@ -55,30 +57,7 @@
 
 
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="{% url 'paths:greenhand' %}">
-                        <div class="path-item">
-                            <div class="col-xs-5 col-sm-4 path-img">
-                                <img src="{% static 'img/1471513730333.png' %}">
-                            </div>
-                            <div class="col-xs-7 col-sm-8">
-                                <div class="path-name">新手入门</div>
-                                <div class="path-course-num">
-                                    </span>6</span>
-                                    门课程
-                                </div>
-                            </div>
-                            <div class="desc-layer">
-                                <div class="center">新手入门路径帮助对 IT 技术感兴趣的新手0基础入门计算机编程。本路径通过新手入门、Linux 及
-                                    Vim课程熟悉实验楼的实践学习环境，再以 C 语言和一个简单的项目引导你一步步进入计算机技术的殿堂。
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="{% url 'videos:questions' %}">
+                    <a href="{% url 'apis:CouresList' %}?tag=Python">
                         <div class="path-item">
                             <div class="col-xs-5 col-sm-4 path-img">
                                 <img src="{% static 'img/1471513769430.png' %}">
@@ -86,7 +65,7 @@
                             <div class="col-xs-7 col-sm-8">
                                 <div class="path-name">Python研发工程师</div>
                                 <div class="path-course-num">
-                                    </span>83</span>
+                                    <span>{% get_courses_tag_count 1 %}</span>
                                     门课程
                                 </div>
                             </div>
@@ -102,7 +81,7 @@
 
 
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="paths/show.html">
+                    <a href="{% url 'apis:CouresList' %}?tag=C\C++">
                         <div class="path-item">
                             <div class="col-xs-5 col-sm-4 path-img">
                                 <img src="{% static 'img/1471513793360.png' %}">
@@ -110,7 +89,7 @@
                             <div class="col-xs-7 col-sm-8">
                                 <div class="path-name">C++ 研发工程师</div>
                                 <div class="path-course-num">
-                                    </span>26</span>
+                                    <span>{% get_courses_tag_count 4 %}</span>
                                     门课程
                                 </div>
                             </div>
@@ -126,7 +105,7 @@
 
 
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="paths/show.html">
+                    <a href="{% url 'apis:CouresList' %}?tag=大数据">
                         <div class="path-item">
                             <div class="col-xs-5 col-sm-4 path-img">
                                 <img src="{% static 'img/1471513926288.png' %}">
@@ -134,7 +113,7 @@
                             <div class="col-xs-7 col-sm-8">
                                 <div class="path-name">大数据工程师</div>
                                 <div class="path-course-num">
-                                    <span>36</span>
+                                    <span>{% get_courses_tag_count 6 %}</span>
                                     门课程
                                 </div>
                             </div>
@@ -149,7 +128,7 @@
 
 
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="paths/show.html">
+                    <a href="{% url 'apis:CouresList' %}?tag=网络信息">
                         <div class="path-item">
                             <div class="col-xs-5 col-sm-4 path-img">
                                 <img src="{% static 'img/1471513867033.png' %}">
@@ -157,7 +136,7 @@
                             <div class="col-xs-7 col-sm-8">
                                 <div class="path-name">信息安全工程师</div>
                                 <div class="path-course-num">
-                                    <span>38</span>
+                                    <span>{% get_courses_tag_count 10 %}</span>
                                     门课程
                                 </div>
                             </div>
@@ -172,7 +151,7 @@
 
 
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="paths/show.html">
+                    <a href="{% url 'apis:CouresList' %}?tag=Linux">
                         <div class="path-item">
                             <div class="col-xs-5 col-sm-4 path-img">
                                 <img src="{% static 'img/1471514004752.png' %}">
@@ -180,7 +159,7 @@
                             <div class="col-xs-7 col-sm-8">
                                 <div class="path-name">Linux运维工程师</div>
                                 <div class="path-course-num">
-                                    <span>33</span>
+                                    <span>{% get_courses_tag_count 3 %}</span>
                                     门课程
                                 </div>
                             </div>
@@ -196,7 +175,7 @@
 
 
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="paths/show.html">
+                    <a href="{% url 'apis:CouresList' %}?tag=Java">
                         <div class="path-item">
                             <div class="col-xs-5 col-sm-4 path-img">
                                 <img src="{% static 'img/1471514111981.png' %}">
@@ -204,7 +183,7 @@
                             <div class="col-xs-7 col-sm-8">
                                 <div class="path-name">Java研发工程师</div>
                                 <div class="path-course-num">
-                                    <span>25</span>
+                                    <span>{% get_courses_tag_count 2 %}</span>
                                     门课程
                                 </div>
                             </div>
@@ -218,122 +197,54 @@
                 </div>
 
 
-{#                <div class="col-xs-12 col-sm-6 col-md-4">#}
-{#                    <a href="paths/show.html">#}
-{#                        <div class="path-item">#}
-{#                            <div class="col-xs-5 col-sm-4 path-img">#}
-{#                                <img src="{% static 'img/1471514095761.png' %}">#}
-{#                            </div>#}
-{#                            <div class="col-xs-7 col-sm-8">#}
-{#                                <div class="path-name">PHP研发工程师</div>#}
-{#                                <div class="path-course-num">#}
-{#                                    <span>30</span>#}
-{#                                    门课程#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <div class="desc-layer">#}
-{#                                <div class="center">PHP 技术路径中包含入门知识、PHP 编程基础、PHP Web#}
-{#                                    框架、项目实战和项目进阶五个模块。模块中的课程将带着你逐步深入，学会如何使用 PHP 实现项目一个博客，聊天室，MVC框架及搜索系统等。完成本路径所有实验课，将具备使用#}
-{#                                    PHP 独立开发 Web 应用的能力。#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </a>#}
-{#                </div>#}
-{##}
-{##}
-{#                <div class="col-xs-12 col-sm-6 col-md-4">#}
-{#                    <a href="paths/show.html">#}
-{#                        <div class="path-item">#}
-{#                            <div class="col-xs-5 col-sm-4 path-img">#}
-{#                                <img src="{% static 'img/1471514153000.png' %}">#}
-{#                            </div>#}
-{#                            <div class="col-xs-7 col-sm-8">#}
-{#                                <div class="path-name">Web前端工程师</div>#}
-{#                                <div class="path-course-num">#}
-{#                                    <span>34</span>#}
-{#                                    门课程#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <div class="desc-layer">#}
-{#                                <div class="center">Web 前端学习路径中首先实践#}
-{#                                    HTML、CSS、JavaScript、jQuery、HTML5等基础知识，然后完成实现页面特效组件、网页游戏、Web应用等一系列项目，帮助你通过动手实践成长为合格的#}
-{#                                    Web 前端工程师。#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </a>#}
-{#                </div>#}
-{##}
-{##}
-{#                <div class="col-xs-12 col-sm-6 col-md-4">#}
-{#                    <a href="paths/show.html">#}
-{#                        <div class="path-item">#}
-{#                            <div class="col-xs-5 col-sm-4 path-img">#}
-{#                                <img src="{% static 'img/1471514037180.png' %}">#}
-{#                            </div>#}
-{#                            <div class="col-xs-7 col-sm-8">#}
-{#                                <div class="path-name">Linux研发工程师</div>#}
-{#                                <div class="path-course-num">#}
-{#                                    <span>27</span>#}
-{#                                    门课程#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <div class="desc-layer">#}
-{#                                <div class="center">Linux 研发学习路径中首先学习 Linux基础、C语言、Git、GDB、数据结构等基础知识，然后完成 TCP/IP、MySQL#}
-{#                                    数据库、操作系统等实验课程。项目阶段将实现 cp、ls、touch、ping等一系列Linux命令和端口扫描、Web服务器、聊天室等网络应用，帮助你通过动手实践入门#}
-{#                                    Linux 系统研发。#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </a>#}
-{#                </div>#}
-{##}
-{##}
-{#                <div class="col-xs-12 col-sm-6 col-md-4">#}
-{#                    <a href="paths/show.html">#}
-{#                        <div class="path-item">#}
-{#                            <div class="col-xs-5 col-sm-4 path-img">#}
-{#                                <img src="{% static 'img/1471513817808.png' %}">#}
-{#                            </div>#}
-{#                            <div class="col-xs-7 col-sm-8">#}
-{#                                <div class="path-name">NodeJS研发工程师</div>#}
-{#                                <div class="path-course-num">#}
-{#                                    <span>21</span>#}
-{#                                    门课程#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <div class="desc-layer">#}
-{#                                <div class="center">NodeJS 学习路径中将通过使用 NodeJS 实现博客、在线笔记、爬虫、即时搜索、漂流瓶、端口扫描器等应用，学习并实践 NodeJS#}
-{#                                    编程基础和Web 应用开发等技术。完成本路径的所有实验课，将能够使用 NodeJS 独立实现 Web 应用程序。#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </a>#}
-{#                </div>#}
-{##}
-{##}
-{#                <div class="col-xs-12 col-sm-6 col-md-4">#}
-{#                    <a href="paths/show.html">#}
-{#                        <div class="path-item">#}
-{#                            <div class="col-xs-5 col-sm-4 path-img">#}
-{#                                <img src="{% static 'img/1471514058548.png' %}">#}
-{#                            </div>#}
-{#                            <div class="col-xs-7 col-sm-8">#}
-{#                                <div class="path-name">MongoDB工程师</div>#}
-{#                                <div class="path-course-num">#}
-{#                                    <span>6</span>#}
-{#                                    门课程#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <div class="desc-layer">#}
-{#                                <div class="center">MongoDB 技术路径中首先学习 Linux、Bash、MySQL基础知识，然后依次学习并实践 Memcached、Redis 和#}
-{#                                    MongoDB技术。本路径的实验将帮助你逐步入门 MongoDB 这类 NoSQL 数据库。#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </a>#}
-{#                </div>#}
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="{% url 'apis:CouresList' %}?tag=PHP">
+                        <div class="path-item">
+                            <div class="col-xs-5 col-sm-4 path-img">
+                                <img src="{% static 'img/1471514095761.png' %}">
+                            </div>
+                            <div class="col-xs-7 col-sm-8">
+                                <div class="path-name">PHP研发工程师</div>
+                                <div class="path-course-num">
+                                    <span>{% get_courses_tag_count 5 %}</span>
+                                    门课程
+                                </div>
+                            </div>
+                            <div class="desc-layer">
+                                <div class="center">PHP 技术路径中包含入门知识、PHP 编程基础、PHP Web
+                                    框架、项目实战和项目进阶五个模块。模块中的课程将带着你逐步深入，学会如何使用 PHP 实现项目一个博客，聊天室，MVC框架及搜索系统等。完成本路径所有实验课，将具备使用
+                                    PHP 独立开发 Web 应用的能力。
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="{% url 'apis:CouresList' %}?tag=前端">
+                        <div class="path-item">
+                            <div class="col-xs-5 col-sm-4 path-img">
+                                <img src="{% static 'img/1471514153000.png' %}">
+                            </div>
+                            <div class="col-xs-7 col-sm-8">
+                                <div class="path-name">Web前端工程师</div>
+                                <div class="path-course-num">
+                                    <span>{% get_courses_tag_count 8 %}</span>
+                                    门课程
+                                </div>
+                            </div>
+                            <div class="desc-layer">
+                                <div class="center">Web 前端学习路径中首先实践
+                                    HTML、CSS、JavaScript、jQuery、HTML5等基础知识，然后完成实现页面特效组件、网页游戏、Web应用等一系列项目，帮助你通过动手实践成长为合格的
+                                    Web 前端工程师。
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
 
 
             </div>
@@ -341,179 +252,8 @@
     </div>
 </div>
 
-<div class="line-and-laboratory">
-    <div class="container">
-        <div class="clearfix text-center item-header">
-            <span class="line"></span>
-            <div class="text-center item-title">实验课程</div>
-            <span class="line"></span>
-        </div>
-        <div class="clearfix courses">
 
 
-            <div class="col-md-3 col-sm-6  course">
-                <a class="course-box" href="courses/show.html">
-                    <div class="sign-box">
-
-
-                        <i class="fa fa-star-o course-follow pull-right"
-                           data-follow-url="/courses/1/follow"
-                           data-unfollow-url="/courses/1/unfollow" style="display:none"></i>
-
-                    </div>
-                    <div class="course-img">
-
-                        <img alt="Linux 基础入门（新版）" src="{% static 'img/ncn1.jpg' %}">
-
-                    </div>
-
-                    <div class="course-body">
-                        <span class="course-title" data-toggle="tooltip" data-placement="bottom" title="Linux 基础入门（新版）">Linux 基础入门（新版）</span>
-                    </div>
-                    <div class="course-footer">
-			<span class="course-per-num pull-left">
-                <i class="fa fa-users"></i>
-                
-                85157
-                
-			</span>
-
-
-                    </div>
-                </a>
-            </div>
-
-
-            <div class="col-md-3 col-sm-6  course">
-                <a class="course-box" href="courses/show.html">
-                    <div class="sign-box">
-
-
-                        <i class="fa fa-star-o course-follow pull-right"
-                           data-follow-url="/courses/11/follow"
-                           data-unfollow-url="/courses/11/unfollow" style="display:none"></i>
-
-                    </div>
-                    <div class="course-img">
-
-                        <img alt="Go语言编程" src="{% static 'img/ncn11.jpg' %}">
-
-                    </div>
-
-                    <div class="course-body">
-                        <span class="course-title" data-toggle="tooltip" data-placement="bottom"
-                              title="Go语言编程">Go语言编程</span>
-                    </div>
-                    <div class="course-footer">
-			<span class="course-per-num pull-left">
-                <i class="fa fa-users"></i>
-
-                5741
-
-			</span>
-
-
-                    </div>
-                </a>
-            </div>
-
-
-            <div class="col-md-3 col-sm-6  course">
-                <a class="course-box" href="courses/show.html">
-                    <div class="sign-box">
-
-
-                        <i class="fa fa-star-o course-follow pull-right"
-                           data-follow-url="/courses/23/follow"
-                           data-unfollow-url="/courses/23/unfollow" style="display:none"></i>
-
-                    </div>
-                    <div class="course-img">
-
-                        <img alt="PHP编程语言" src="{% static 'img/ncn23.jpg' %}">
-
-                    </div>
-
-                    <div class="course-body">
-                        <span class="course-title" data-toggle="tooltip" data-placement="bottom"
-                              title="PHP编程语言">PHP编程语言</span>
-                    </div>
-                    <div class="course-footer">
-			<span class="course-per-num pull-left">
-                <i class="fa fa-users"></i>
-
-                8093
-
-			</span>
-
-
-                    </div>
-                </a>
-            </div>
-
-
-            <div class="col-md-3 col-sm-6  course">
-                <a class="course-box" href="courses/show.html">
-                    <div class="sign-box">
-
-
-                        <i class="fa fa-star-o course-follow pull-right"
-                           data-follow-url="/courses/30/follow"
-                           data-unfollow-url="/courses/30/unfollow" style="display:none"></i>
-
-                    </div>
-                    <div class="course-img">
-
-                        <img alt="Python Django Web框架" src="{% static 'img/ncn30.jpg' %}">
-
-                    </div>
-
-                    <div class="course-body">
-                        <span class="course-title" data-toggle="tooltip" data-placement="bottom"
-                              title="Python Django Web框架">Python Django Web框架</span>
-                    </div>
-                    <div class="course-footer">
-			<span class="course-per-num pull-left">
-                <i class="fa fa-users"></i>
-
-                5691
-
-			</span>
-
-
-                    </div>
-                </a>
-            </div>
-
-
-        </div>
-        <div class="clearfix item-footer">
-            <div class="pull-right watch-all">
-                <a href="courses/index.html">查看更多 ></a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="modal fade" id="invite-user" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
-                        class="sr-only">Close</span></button>
-                <h4 class="modal-title">邀请好友，双方都可获赠实验豆！</h4>
-            </div>
-            <div class="modal-body">
-
-                <p><h4><a href="#sign-modal" data-toggle="modal" data-sign="signin">登录</a>后邀请好友注册，您和好友将分别获赠3个实验豆
-            </h4></p>
-
-                <div id="msg-modal"></div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="modal fade" id="flash-message" tabindex="-1" role="dialog">
     <div class="modal-dialog" rolw="document">
@@ -538,118 +278,6 @@
 </div>
 
 
-{#<div class="modal fade" id="sign-modal" tabindex="-1" role="dialog">#}
-{#    <div class="modal-dialog modal-sm" role="document">#}
-{#        <div class="modal-content">#}
-{#            <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>#}
-{#            </button>#}
-{#            <div class="modal-body">#}
-{#                <ul class="nav nav-tabs" role="tablist">#}
-{#                    <li role="presentation" class="active">#}
-{#                        <a href="#signin-form" aria-controls="signin-form" role="tab" data-toggle="tab">登录</a>#}
-{#                    </li>#}
-{#                    <li role="presentation">#}
-{#                        <a href="#signup-form" aria-controls="signup-form" role="tab" data-toggle="tab">注册</a>#}
-{#                    </li>#}
-{#                </ul>#}
-{#                <div class="tab-content">#}
-{#                    <div role="tabpanel" class="tab-pane active" id="signin-form">#}
-{#                        <form action="/login" method="post">#}
-{#                            <div class="form-group">#}
-{#                                <div class="input-group">#}
-{#                                    <div class="input-group-addon">#}
-{#                                        <i class="fa fa-envelope" style="margin:0;"></i>#}
-{#                                    </div>#}
-{#                                    <input type="email" name="login" class="form-control" placeholder="请输入邮箱">#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <div class="form-group">#}
-{#                                <div class="input-group">#}
-{#                                    <div class="input-group-addon">#}
-{#                                        <i class="fa fa-lock" style="margin:0;"></i>#}
-{#                                    </div>#}
-{#                                    <input type="password" name="password" class="form-control" placeholder="请输入密码">#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <div class="form-inline verify-code-item" style="display:none;">#}
-{#                                <div class="form-group">#}
-{#                                    <div class="input-group">#}
-{#                                        <input type="text" name="captcha_v" class="form-control" placeholder="请输入验证码">#}
-{#                                    </div>#}
-{#                                </div>#}
-{#                                <img class="verify-code" src="" source="https://www.shiyanlou.com/captcha.gif">#}
-{#                            </div>#}
-{#                            <div class="form-group remember-login">#}
-{#                                <input name="remember" type="checkbox" value="y"> 下次自动登录#}
-{#                                <a class="pull-right" href="reset_password/index.html">忘记密码？</a>#}
-{#                            </div>#}
-{#                            <div class="form-group">#}
-{#                                <input class="btn btn-primary" name="submit" type="submit" value="进入实验楼">#}
-{#                            </div>#}
-{#                            <div class="form-group widget-signin">#}
-{#                                <span>快速登录</span>#}
-{#                                <a href="/auth/qq?next="><i class="fa fa-qq"></i></a>#}
-{#                                <a href="/auth/weibo?next="><i class="fa fa-weibo"></i></a>#}
-{#                                <a href="/auth/weixin?next="><i class="fa fa-weixin"></i></a>#}
-{#                                <a href="/auth/github?next="><i class="fa fa-github"></i></a>#}
-{#                                <a href="/auth/renren?next="><i class="fa fa-renren"></i></a>#}
-{#                            </div>#}
-{#                            <div class="form-group error-msg">#}
-{#                                <div class="alert alert-danger" role="alert"></div>#}
-{#                            </div>#}
-{#                        </form>#}
-{#                    </div>#}
-{#                    <div role="tabpanel" class="tab-pane" id="signup-form">#}
-{#                        <form action="/register" method="post">#}
-{#                            <div class="form-group">#}
-{#                                <div class="input-group">#}
-{#                                    <div class="input-group-addon">#}
-{#                                        <i class="fa fa-envelope" style="margin:0;"></i>#}
-{#                                    </div>#}
-{#                                    <input type="email" name="email" class="form-control" placeholder="请输入邮箱">#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <div class="form-group">#}
-{#                                <div class="input-group">#}
-{#                                    <div class="input-group-addon">#}
-{#                                        <i class="fa fa-lock" style="margin:0;"></i>#}
-{#                                    </div>#}
-{#                                    <input type="password" name="password" class="form-control" placeholder="请输入密码">#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <div class="form-inline">#}
-{#                                <div class="form-group">#}
-{#                                    <div class="input-group">#}
-{#                                        <input type="text" name="captcha_v" class="form-control" placeholder="请输入验证码">#}
-{#                                    </div>#}
-{#                                </div>#}
-{#                                <img class="verify-code" src="" source="https://www.shiyanlou.com/captcha.gif">#}
-{#                            </div>#}
-{#                            <div class="form-group">#}
-{#                                <input class="btn btn-primary" name="submit" type="submit" value="注册">#}
-{#                            </div>#}
-{#                            <div class="form-group agree-privacy">#}
-{#                                注册表示您已经同意我们的<a href="privacy/index.html" target="_blank">隐私条款</a>#}
-{#                            </div>#}
-{#                            <div class="form-group widget-signup">#}
-{#                                <span>快速注册</span>#}
-{#                                <a href="/auth/qq?next="><i class="fa fa-qq"></i></a>#}
-{#                                <a href="/auth/weibo?next="><i class="fa fa-weibo"></i></a>#}
-{#                                <a href="/auth/weixin?next="><i class="fa fa-weixin"></i></a>#}
-{#                                <a href="/auth/github?next="><i class="fa fa-github"></i></a>#}
-{#                                <a href="/auth/renren?next="><i class="fa fa-renren"></i></a>#}
-{#                            </div>#}
-{#                            <div class="form-group error-msg">#}
-{#                                <div class="alert alert-danger" role="alert"></div>#}
-{#                            </div>#}
-{#                        </form>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#</div>#}
-
 
 <div id="base-data"
 
@@ -660,7 +288,6 @@
      data-is-login=false
 
      data-is-jwt=true
-     data-socket-url="wss://comet.shiyanlou.com"
      data-msg-user=""
      data-msg-system=""
 ></div>
@@ -694,5 +321,4 @@
 {#{% include 'tail.html' %}#}
 
 </body>
-</html>
 {% endblock %}

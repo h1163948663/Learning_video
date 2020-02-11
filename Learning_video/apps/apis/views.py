@@ -4,10 +4,7 @@ from django.shortcuts import render
 from django.shortcuts import render
 
 # Create your views here.
-from django.shortcuts import HttpResponse
 from django.shortcuts import render, HttpResponse
-from django.http import JsonResponse
-from django.contrib.auth.mixins import LoginRequiredMixin
 from libs import sms
 import random
 import logging
@@ -19,7 +16,6 @@ logger = logging.getLogger("apis")
 # logger = logging.getLogger('sms')
 def test(request):
     return HttpResponse("题库视图")
-
 
 def get_mobile_captcha(request):
     ret = {"code": 200, "msg": "验证码发送成功！"}
@@ -60,61 +56,96 @@ def check_captcha(request):
     print(post_captcha_code, session_captcha_code)
     if post_captcha_code.lower() == session_captcha_code.lower():
         ret = {"code": 200, "msg": "验证码正确"}
+        print(ret)
     return JsonResponse(ret)
 
-from django.views.generic import View
-from apps.videos.models import Courese
-
-class get_coureses(View):
-    def get(self,request):
-        page = int(request.GET.get("page", 1))
-        pagesize = int(request.GET.get("pagesize", 15))
-        offset = int(request.GET.get("offset", 0))
-
-        coureses_list = Courese.objects.all()
-        total = len(coureses_list)
-        coureses_list = coureses_list.values('id','courese_name', 'num', 'content', 'level',)
-        coureses_list = coureses_list[offset:offset + pagesize]
-        # 格式是bootstrap-table要求的格式
-        questions_dict = {'total': total, 'coureses_list': coureses_list}
-        return JsonResponse(questions_dict, safe=False)
 
 from django.views.generic import View
-from apps.videos.models import Courese,Category
+from apps.videos.models import Courese,Category,Tag
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 class CouresList(View):
     def get(self,request):
-
         tag = request.GET.get("tag")
-        courses = 0
-        if tag:
-            tag_id = Category.objects.filter(name=tag).first()
-            courses = Courese.objects.filter(tag_id=tag_id).all()
-        print(tag)
-        coures_tag = Category.objects.all()
-        paginator = Paginator(courses,15)
+        order = request.GET.get("order")
+        user = request.user
+        if tag != 'all':
+            if tag =='' or tag ==None:
+                tag = 'all'
+            if tag == 'C\C  ':
+                tag="C\C++"
+            tag_id = Tag.objects.filter(tag=tag).values('id')
+            courses = Courese.objects.filter(tag=tag_id).all()
+        else:
+            courses = Courese.objects.all()
+        if order == 'latest':
+            courses = courses.order_by('create_time')
+        if order == 'hotest':
+            courses = courses.order_by('view_count').reverse()
         print(courses)
-        print(paginator)
+        coures_tag = Tag.objects.all()
+        paginator = Paginator(courses,15)
         page = request.GET.get('page')
         try:
             contacts = paginator.page(page)
         except PageNotAnInteger:
-            # If page is not an integer, deliver first page.
             contacts = paginator.page(1)
         except EmptyPage:
             contacts = paginator.page(paginator.num_pages)
-        coures_dict = {'contacts':contacts,'coures_tag':coures_tag}
-        # 格式是bootstrap-table要求的格式
-        return render(request,'courses/index2.html',coures_dict)
+        coures_dict = {'contacts':contacts,'tag':tag,'coures_tag':coures_tag,'user':user,'order':order}
+        return render(request,'courses/index.html',coures_dict)
 
-
-from django.db.models import Q
 class CoureseSearch(View):
     def get(self,request):
-        search = request.GET.get("search")
-        courese_list = Courese.objects.filter()
+        search = request.GET.get("search",'')
+        order = request.GET.get("order",'')
+        user = request.user
+        print(search)
+        courese_list = None
+        tag = 'all'
         if search:
-            courese_list = courese_list.filter(Q(courese_name=search)|Q(content=search))
-        print(courese_list)
-        return render(request,'courses/index.html',{'courese_list':courese_list})
+            courese_list = Courese.objects.filter(courese_name__icontains=search)
+        if order == 'latest':
+            courese_list = courese_list.order_by('id')
+        if order == 'hotest':
+            courese_list = courese_list.order_by('view_count').reverse()
+        paginator = Paginator(courese_list, 15)
+        page = request.GET.get('page')
+        try:
+            contacts = paginator.page(page)
+        except PageNotAnInteger:
+            contacts = paginator.page(1)
+        except EmptyPage:
+            contacts = paginator.page(paginator.num_pages)
+        coures_dict = {'contacts': contacts,'tag':tag,'search':search,'order':order}
+        return render(request,'courses/index.html',coures_dict)
+
+from django.http import JsonResponse
+from django.views.decorators.http import require_http_methods
+from  django.http import HttpResponseBadRequest
+
+def ajax_required(f):
+    """Not a mixin, but a nice decorator to validate than a request is AJAX"""
+    def wrap(request, *args, **kwargs):
+        if not request.is_ajax():
+            return HttpResponseBadRequest()
+        return f(request, *args, **kwargs)
+    wrap.__doc__ = f.__doc__
+    wrap.__name__ = f.__name__
+    return wrap
+
+from django.views.decorators.csrf import csrf_exempt
+@csrf_exempt
+@ajax_required
+@require_http_methods(["POST"])
+def collect(request):
+    if not request.user.is_authenticated:
+        return JsonResponse({"code": 1, "msg": "请先登录"})
+    video_id = request.POST['video_id']
+    print(video_id)
+    video = Courese.objects.get(pk=video_id)
+    print(video)
+    user = request.user
+    print(user)
+    video.switch_collect(user)
+    return JsonResponse({"code": 0, "user_collected": video.user_collected(user)})

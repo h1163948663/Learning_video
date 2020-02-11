@@ -8,6 +8,7 @@ from django.db.models.fields.files import ImageFieldFile
 import os
 
 class User(AbstractUser):
+    id  = models.AutoField(primary_key=True,verbose_name="id")
     realname = models.CharField(max_length=8, verbose_name="真实姓名")
     mobile = models.CharField(max_length=11, verbose_name="手机号")
     qq = models.CharField(max_length=10, verbose_name="QQ号")

@@ -341,7 +341,14 @@ td, th {
 .glyphicon-star:before {
     content: "\e006"
 }
+.button_self {
+    border: 1px solid transparent;
+    padding: 3px 3px ;
+    width: 15%;
+    background-color: transparent ;
+    font-size: 15px;
 
+}
 .glyphicon-star-empty:before {
     content: "\e007"
 }

@@ -2,6 +2,7 @@
 {% load thumbnail %}
 <!DOCTYPE html>
 <html lang="zh-CN">
+<head>
 <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 <nav class="navbar navbar-default navbar-fixed-top header">
     <div class="container">
@@ -20,38 +21,8 @@
         <div class="collapse navbar-collapse" id="header-navbar-collapse" >
             <ul class="nav navbar-nav" >
                 <li class="">
-                    <a class="" href="{% url 'videos:courese' %}" >全部课程</a>
+                    <a class="" href="{% url 'apis:CouresList' %}?tag=all" >全部课程</a>
                 </li>
-{#                <li class="">#}
-{#                    <a href="{% url 'questions:index' %}">讨论区</a>#}
-{#                </li>#}
-{#                <li class=" bootcamp new-nav logo-1111">#}
-{#                    <a href="bootcamp/index.html">训练营</a>#}
-{#                </li>#}
-
-            <!--<div class="navbar-right btns">
-              <a class="btn btn-default navbar-btn sign-in" data-sign="signin" href="{% url "user:login" %}" data-toggle="modal">登录</a>
-              <a class="btn btn-default navbar-btn sign-up" data-sign="signup" href="{% url "user:register" %}" data-toggle="modal">注册</a>
-            </div>-->
-{#             <!-- user login dropdown start-->#}
-                <!--{% if user.is_authenticated %}
-                    <li class="dropdown ">
-                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                        {{ request.user.username }}
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="" href="#">个人中心</a></li>
-                        <li><a class="" href="#">修改密码</a></li>
-                        <li><a class="" href="{% url 'user:logout' %}">退出</a></li>
-                    </ul>
-                </li>
-                  {% else %}
-                  <div class="navbar-right btns">
-                      <a class="btn btn-default navbar-btn sign-in" data-sign="signin" href="{% url 'user:login' %}"  data-toggle="modal">登录</a>
-                      <a class="btn btn-default navbar-btn sign-up" data-sign="signup" href="{% url 'user:register' %}" data-toggle="modal">注册</a>
-                  </div>
-                  {% endif %}-->
 </ul>
         <ul class="nav navbar-nav navbar-right" >
             {% if user.is_authenticated %}
@@ -75,104 +46,214 @@
                   </div>
                   {% endif %}
         </ul>
-        <form class="navbar-form navbar-right" action="search" method="get" role="search"  >
+        <form class="navbar-form navbar-right" method="get" action="{% url 'apis:CoureseSearch' %}" >
                 <div class="form-group">
-                    <input type="text" class="form-control" id="search" name="search" autocomplete="off" placeholder="搜索课程" href="{% url 'apis:CoureseSearch' %}" >
+                    <input type="text" class="form-control" id="search" name="search" autocomplete="off" placeholder="搜索课程"  >
                 </div>
             </form>
 
         </div>
     </div>
 </nav>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Lei Shi">
-    <meta http-equiv="Cache-Control" content="o-transform">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta name="csrf-token" content="1483758872##fd2cac389b2b7c009a744bcaecaa41d71592cfe8">
 
 
-    <title>学习社 - 学编程，练技术</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Lei Shi">
+        <meta http-equiv="Cache-Control" content="o-transform">
+        <meta http-equiv="Cache-Control" content="no-siteapp">
+
+{#        <title>学习社 - 学编程，练技术</title>#}
+{#        <link  rel="stylesheet" href="{% static 'comment/css/main.css' %}" />#}
+{#        <link rel="stylesheet" type="text/css" href="{% static 'comment/css/sinaFaceAndEffec.css' %}" />#}
+{#        <script type="text/javascript" src="{% static 'comment/js/jquery-1.8.3.min.js' %}"></script>#}
+{#          <link href="https://vjs.zencdn.net/7.6.0/video-js.css" rel="stylesheet">#}
 
 
-    <meta content="学习社是高校领先的自主学习平台，创新的题库驱动教学模式，以就业为导向，为IT相关专业的在校学生及从业者提供编程、运维、测试、云计算、大数据、数据库等全面的IT技术动手实践环境，提供Linux、Python、Java、C语言、开发等热门课程。"
-          name="description">
-    <meta content="学习社,IT培训,IT教育,编程,在线编程,Linux,Linux教程,Linux操作系统,Python,Python教程,Python基础教程,Java,Java编程,C语言,大数据,Hadoop"
-          name="keywords">
 
-    <meta content="学习社，点创科技" name="author">
 
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="{% static 'font-awesome/4.7.0/css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="{% static 'highlight.js/9.8.0/monokai-sublime.min.css' %}">
-    <link rel="stylesheet" href="{% static 'app/css/libs/bootstrap/3.3.7/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'app/css/libs/katex/0.6.0/katex.min.css' %}">
-    <link rel="stylesheet" href="{% static 'app/css/libs/videojs/5.11.7/video-js.min.css' %}">
-    <link rel="stylesheet" href="{% static 'app/css/dest/styles.css' %}?=2016121272249">
 
-    <style>
-        @font-face {
-            font-family: "lantingxihei";
-            src: url("{% static 'fonts/FZLTCXHJW.TTF' %}");
-        }
 
-        /* modal 模态框*/
-        #invite-user .modal-body {
-            overflow: hidden;
-        }
 
-        #invite-user .modal-body .form-label {
-            margin-bottom: 16px;
-            font-size: 14px;
-        }
 
-        #invite-user .modal-body .form-invite {
-            width: 80%;
-            padding: 6px 12px;
-            background-color: #eeeeee;
-            border: 1px solid #cccccc;
-            border-radius: 5px;
-            float: left;
-            margin-right: 10px;
-        }
+{#        <link rel="shortcut icon" href="favicon.ico">#}
+        <link rel="stylesheet" href="{% static 'font-awesome/4.7.0/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'highlight.js/9.8.0/monokai-sublime.min.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/libs/bootstrap/3.3.7/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/libs/katex/0.6.0/katex.min.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/libs/videojs/5.11.7/video-js.min.css' %}">
+        <link rel="stylesheet" href="{% static 'app/css/dest/styles.css' %}?=2016121272249">
 
-        #invite-user .modal-body .msg-modal-style {
-            background-color: #7dd383;
-            margin-top: 10px;
-            padding: 6px 0;
-            text-align: center;
-            width: 100%;
-        }
+        <style>
+            @font-face {
+                font-family: "lantingxihei";
+                src: url("{% static 'fonts/FZLTCXHJW.TTF' %}");
+            }
 
-        #invite-user .modal-body .modal-flash {
-            position: absolute;
-            top: 53px;
-            right: 74px;
-            z-index: 999;
-        }
+            /* modal 模态框*/
+            #invite-user .modal-body {
+                overflow: hidden;
+            }
 
-        /* end modal */
+            #invite-user .modal-body .form-label {
+                margin-bottom: 16px;
+                font-size: 14px;
+            }
 
-        .en-footer {
-            padding: 30px;
-            text-align: center;
-            font-size: 14px;
-        }
-    </style>
+            #invite-user .modal-body .form-invite {
+                width: 80%;
+                padding: 6px 12px;
+                background-color: #eeeeee;
+                border: 1px solid #cccccc;
+                border-radius: 5px;
+                float: left;
+                margin-right: 10px;
+            }
 
-    <style style="text/css">
-        .navbar-banner {
-            margin-top: 50px;
-            background: url("/static/img/homepage-bg.png");
-            background-size: cover;
-            backgtound-repeat: no-repeat;
-        }
-    </style>
+            #invite-user .modal-body .msg-modal-style {
+                background-color: #7dd383;
+                margin-top: 10px;
+                padding: 6px 0;
+                text-align: center;
+                width: 100%;
+            }
 
+            #invite-user .modal-body .modal-flash {
+                position: absolute;
+                top: 53px;
+                right: 74px;
+                z-index: 999;
+            }
+
+            /* end modal */
+
+            .en-footer {
+                padding: 30px;
+                text-align: center;
+                font-size: 14px;
+            }
+        </style>
+        <link rel="stylesheet" href="{% static 'restatic/js/libs/marked/katex/katex.min.css' %}">
+        <style>
+            .bootcamp-infobox {
+                margin: 50px 0 0;
+            }
+
+            .invite-friends-link {
+                margin-top: 10px;
+                padding-left: 8px;
+            }
+
+            .invite-friends-link input {
+                margin-left: -5px;
+            }
+
+            .invite-friends-link button {
+                float: left;
+                margin-top: 5px;
+                margin-left: -5px;
+            }
+
+            .invite-friends-link .copy-msg {
+                float: left;
+                margin-top: 10px;
+                margin-left: 20px;
+                color: #42b1ad;
+            }
+
+            p.join-vip-faq {
+                margin-top: 20px;
+                margin-bottom: -50px;
+                font-size: 13px;
+            }
+
+            p.join-vip-faq img {
+                height: 13px;
+                width: 13px;
+                margin-top: -2px;
+            }
+
+            a.vip-without-bean {
+                font-size: 18px;
+                line-height: 30px;
+            }
+        </style>
+
+
+
+
+
+
+{#    <link rel="stylesheet" href="{% static 'font-awesome/4.7.0/css/font-awesome.min.css' %}">#}
+{#    <link rel="stylesheet" href="{% static 'highlight.js/9.8.0/monokai-sublime.min.css' %}">#}
+{#    <link rel="stylesheet" href="{% static 'app/css/libs/bootstrap/3.3.7/css/bootstrap.min.css' %}">#}
+{#    <link rel="stylesheet" href="{% static 'app/css/libs/katex/0.6.0/katex.min.css' %}">#}
+{#    <link rel="stylesheet" href="{% static 'app/css/libs/videojs/5.11.7/video-js.min.css' %}">#}
+{#    <link rel="stylesheet" href="{% static 'app/css/dest/styles.css' %}?=2016121272249">#}
+{##}
+{#    <style>#}
+{#        @font-face {#}
+{#            font-family: "lantingxihei";#}
+{#            src: url("{% static 'fonts/FZLTCXHJW.TTF' %}");#}
+{#        }#}
+{##}
+{#        /* modal 模态框*/#}
+{#        #invite-user .modal-body {#}
+{#            overflow: hidden;#}
+{#        }#}
+{##}
+{#        #invite-user .modal-body .form-label {#}
+{#            margin-bottom: 16px;#}
+{#            font-size: 14px;#}
+{#        }#}
+{##}
+{#        #invite-user .modal-body .form-invite {#}
+{#            width: 80%;#}
+{#            padding: 6px 12px;#}
+{#            background-color: #eeeeee;#}
+{#            border: 1px solid #cccccc;#}
+{#            border-radius: 5px;#}
+{#            float: left;#}
+{#            margin-right: 10px;#}
+{#        }#}
+{##}
+{#        #invite-user .modal-body .msg-modal-style {#}
+{#            background-color: #7dd383;#}
+{#            margin-top: 10px;#}
+{#            padding: 6px 0;#}
+{#            text-align: center;#}
+{#            width: 100%;#}
+{#        }#}
+{##}
+{#        #invite-user .modal-body .modal-flash {#}
+{#            position: absolute;#}
+{#            top: 53px;#}
+{#            right: 74px;#}
+{#            z-index: 999;#}
+{#        }#}
+{##}
+{#        /* end modal */#}
+{##}
+{#        .en-footer {#}
+{#            padding: 30px;#}
+{#            text-align: center;#}
+{#            font-size: 14px;#}
+{#        }#}
+{#    </style>#}
+{##}
+{#    <style style="text/css">#}
+{#        .navbar-banner {#}
+{#            margin-top: 50px;#}
+{#            background: url("/static/img/homepage-bg.png");#}
+{#            background-size: cover;#}
+{#            backgtound-repeat: no-repeat;#}
+{#        }#}
+{#    </style>#}
 
 </head>
+</html>
 {% block content %}{% endblock %}
 
 

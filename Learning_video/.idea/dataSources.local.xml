@@ -16,7 +16,7 @@
       <auth-required>false</auth-required>
       <introspection-schemas>*:</introspection-schemas>
     </data-source>
-    <data-source name="db" uuid="a4673e0e-93c5-4036-b1bc-8eca56621c1e">
+    <data-source name="db [2]" uuid="51da8fe5-9a1b-47b8-b9cf-4db6b8d7d598">
       <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1" exact-driver-version="3.25">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>

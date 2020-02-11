@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load video_class %}
 {% block content %}
     <!DOCTYPE html>
     <html lang="zh-CN">
+    <link href="https://vjs.zencdn.net/7.6.0/video-js.css" rel="stylesheet">
     <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,17 +16,15 @@
         <meta http-equiv="Cache-Control" content="no-siteapp">
         <meta name="csrf-token" content="1483780974##87f89328c5616669f00302a263fe9061bb852818">
 
-
+        {% if tag == 'all' %}
         <title>全部 - 课程 - 学习社</title>
+        {% endif %}
+        {% if tag != all %}
+        <title>{{ tag }} - 课程 - 学习社</title>
+        {% endif %}
 
 
-        <meta content="实验楼课程分为基础课和项目课，内容涵盖了Linux、Python、Java、C语言、Ruby、Android、IOS开发、大数据、信息安全等IT技术领域。"
-              name="description">
-        <meta content="实验楼课程,IT培训课程,IT实训课程,IT在线课程,all" name="keywords">
 
-        <meta content="实验楼,琛石科技" name="author">
-
-        <link rel="shortcut icon" href="favicon.ico">
         <link rel="stylesheet" href="{% static 'font-awesome/4.7.0/css/font-awesome.min.css' %}">
         <link rel="stylesheet" href="{% static 'highlight.js/9.8.0/monokai-sublime.min.css' %}">
         <link rel="stylesheet" href="{% static 'app/css/libs/bootstrap/3.3.7/css/bootstrap.min.css' %}">
@@ -96,11 +98,15 @@
                     <div class="row course-cates" id="coures_category">
                         <div class="col-md-1 course-cates-title" id="category">标签：</div>
                         <div class="col-md-11 course-cates-content">
-                            <a class="active" href="{% url 'apis:CouresList' %}?tag=all">全部</a>
-                            {% for i in coures_tag %}
-                            <a class="tag"  href="{% url 'apis:CouresList' %}?tag={{ i.name }}">{{ i.name }}</a>
-                            {% endfor %}
-{#                            <a class="" href="/courses/?course_type=all&amp;tag=all&amp;fee=free">{{ rows.level }}</a>#}
+
+                            <a  {% if  tag == 'all'  %} class="active"  {% endif %} href="{% url 'apis:CouresList' %}?tag=all">全部</a>
+
+
+                        {% for i in coures_tag %}
+
+                            <a {% if tag == i.tag %} class="active"  {% endif %} href="{% url 'apis:CouresList' %}?tag={{ i.tag }}">{{ i.tag }}</a>
+
+                        {% endfor %}
                         </div>
                     </div>
 
@@ -111,25 +117,39 @@
                     </ul>
                     <div class="clearfix"></div>
                     <div class="courses-sort">
-                        <a href="/courses/?tag=alll&amp;order=latest">最新</a>
+
+                        <a href="?tag={{ tag }}&search={{ search }}&order=latest"   {% if order == 'latest' %}  class="active" {% endif %}>最新</a>
                         /
-                        <a href="/courses/?tag=all&amp;order=hotest">最热</a>
+                        <a href="?tag={{ tag }}&search={{ search }}&order=hotest"   {% if order == 'hotest' %}  class="active" {% endif %} >最热</a>
                     </div>
                     <div class="search-result"></div>
 
                     {% for courses in contacts %}
+
                         <div class="col-md-4 col-sm-6  course">
-                        <a class="course-box" href="{{ courses.id }}">
-                        <div class="sign-box">
-                            <i class="fa fa-star-o course-follow pull-right"
-                               data-follow-url="/courses/729/follow"
-                               data-unfollow-url="/courses/729/unfollow"  style="display:none"  ></i>
-                        </div>
+                        {% csrf_token %}
+
+                        <button type="submit"  class="button_self "  id="like{{ courses.id }}"  style="{% user_collect_style courses.id user %}" >
+
+                        <span class="glyphicon glyphicon-star" aria-hidden="true" >
+
+                        </span>
+                        </button>
+                            <a id="video_id{{ courses.id }}" video_id="{{ courses.id }}" class="course-box " href=" {% url 'videos:courese_detail' courses.id %} ">
+                        <!--<div class="sign-box">
+                            <i href="" id="like" class="fa fa-star-o course-follow pull-right "
+{#                               data-follow-url="/courses/729/follow"#}
+{#                               data-unfollow-url="/courses/729/unfollow"#}
+                               video-id ="{{ video.id }}"
+                                ></i>
+                        </div>-->
+
         <div class="course-img">
             {% if  courses.img %}
 
             {% endif %}
-            <img alt="" src="{{ courses.img }}">
+            <img alt="" src="{{ courses.img }}" >
+
         </div>
         <div class="course-body">
             <span class="course-title" data-toggle="tooltip" data-placement="bottom" >{{ courses.courese_name }}</span>
@@ -137,52 +157,97 @@
         </div>
         <div class="course-footer">
 			<span class="course-per-num pull-left">
-                <i class="fa fa-users"></i>
-                12
+                <i class="fa fa-users" ></i>
+                {{ courses.view_count }}人次观看
 			</span>
         </div>
     </a>
 </div>
-                    {% endfor %}
+
+{%  endfor %}
                     <nav class="pagination-container">
                         <ul class="pagination">
+                        {% if contacts.has_previous %}
                             <li class="">
-                                {% if contacts.has_previous %}
-                                <a href="?page={{ contacts.previous_page_number }}" aria-label="Previous">
+                                <a href="?page={{ contacts.previous_page_number }}&tag={{ tag }}&search={{ search }}" aria-label="Previous">
                                     <span aria-hidden="true" >上一页</span>
-                                {% endif %}
                                 </a>
                             </li>
-        <!--{% if contacts.has_previous %}
-            <a href="?page={{ contacts.previous_page_number }}">上一页</a>
-        {% endif %}-->
-                            {% if contacts.next_page_number %}
-                                <li class="">
-                                <span aria-hidden="true">
-            Page {{ contacts.number }} of {{ contacts.paginator.num_pages }}
+                        {% endif %}
+                            {% for i in contacts.paginator.page_range %}
+
+                                <li {%  if  i == contacts.number %} class="active"  {% endif %}>
+                            <a aria-label="Next"  href="?page={{ i }}&tag={{ tag }}&search={{ search }}&order={{ order }}">
+                                <span aria-hidden="true" >
+                                    {{ i }}
                                 </span>
-                                </li>
-                            {% endif %}
+                            </a>
+                            </li>
+
+                            {% endfor %}
+                            {% if contacts.has_next %}
                             <li class="">
-                                {% if contacts.has_next %}
-                                <a aria-label="Next" href="?page={{ contacts.next_page_number }}">
+
+                                <a aria-label="Next" href="?page={{ contacts.next_page_number }}&tag={{ tag }}&search={{ search }}">
                                     <span aria-hidden="true">下一页</span>
                                 </a>
-                                {% endif %}
+
                             </li>
+                            {% endif %}
                         </ul>
                     </nav>
                 </div>
 
             </div>
-            <div class="col-md-3 layout-side">
+<div class="col-md-3 layout-side">
 
 
 
 
 
+<div class="panel panel-default panel-userinfo">
+    <div class="panel-body body-userinfo">
+        <div class="media userinfo-header">
+            <div class="media-left">
+                <div class="user-avatar">
+
+                     <a class="avatar" href="#sign-modal" data-toggle="modal" data-sign="signin">
+                         <img class="circle" src="{% static 'img/logo-grey.png' %}">
+                     </a>
+
+                </div>
+             </div>
+            <div class="media-body">
+
+                 <span class="media-heading username">欢迎来到学习社</span>
+                 <p class="vip-remain">看视频，学编程</p>
 
             </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="sidebox">
+
+	<div class="sidebox-header">
+		<h4 class="sidebox-title">最热路径</h4>
+	</div>
+	<div class="sidebox-body course-content side-list-body">
+        <a href="{% url 'apis:CouresList' %}?tag=Python"><img style="width:25px;height:25px" src="{% static 'img/1471513769430.png' %}"> Python 研发工程师</a>
+        <a href="{% url 'apis:CouresList' %}?tag=大数据"><img style="width:25px;height:25px" src="{% static 'img/1471513926288.png' %}"> 大数据工程师</a>
+        <a href="{% url 'apis:CouresList' %}?tag=C\C++"><img style="width:25px;height:25px" src="{% static 'img/1471513793360.png' %}"> C++ 研发工程师</a>
+        <a href="{% url 'apis:CouresList' %}?tag=网络信息"><img style="width:25px;height:25px" src="{% static 'img/1471513867033.png' %}"> 信息安全工程师</a>
+        <a href="{% url 'apis:CouresList' %}?tag=Linux"><img style="width:25px;height:25px" src="{% static 'img/1471514004752.png' %}"> Linux 运维工程师</a>
+	</div>
+
+</div>
+
+
+
+        </div>
         </div>
     </div>
 
@@ -196,7 +261,6 @@
          data-is-login=false
 
          data-is-jwt=true
-         data-socket-url="wss://comet.shiyanlou.com"
          data-msg-user=""
          data-msg-system=""
     ></div>
@@ -217,20 +281,53 @@
 
     <script src="{% static 'ravenjs/3.7.0/raven.min.js' %}"></script>
     <script>
+    {% for i in contacts %}
+    $(function (){
+
+        $("#like{{ i.id }}").click(function () {
+            var video_id = $("#video_id{{ i.id }}").attr("video_id");
+            {#alert(video_id)#}
+            console.log('ok');
+            $.ajax({
+                url: '/apis/collect/',
+                data: {
+                    {#'user': user_id,#}
+                    video_id: video_id,
+                    'csrf_token': $('[name="csrfmiddlewaretoken"]').val()
+                },
+                type: 'POST',
+                dataType: 'json',
+                success: function (data) {
+                var code = data.code;
+                if(code == 0){
+                    var user_collected = data.user_collected;
+                    {#$('#like-count').text(likes);#}
+                    if(user_collected == 0){
+                        $('#like{{ i.id }}')[0].style.color="#777"
+                    }else{
+                        $('#like{{ i.id }}')[0].style.color="#ff5c5d"
+                    }
+                }else{
+                    var msg = data.msg;
+                    alert(msg)
+                }
+
+            },
+                error: function(data){
+              alert("收藏失败")
+            }
+            });
+            console.log('ok2')
+        });
+    }
+    );
+    {% endfor %}
+    </script>
+
+    <script>
         Raven.config('https://bc3878b7ed0a4468a65390bd79e6e73f@sentry.shiyanlou.com/5', {
             release: '3.12.13'
         }).install();
-    </script>
-    <script>
-        function category(tablecategory) {
-            var params = {};
-            console.log(tablecategory);
-        params['pagesize'] = tableParams.limit;
-        params['offset'] = tableParams.offset;
-        params['page'] = $table.bootstrapTable('getOptions').pageNumber;
-        params['search'] = $("#search").val();
-        $('#')
-        }
     </script>
 
 
@@ -242,43 +339,7 @@
     ></div>
 
     <script src="{% static 'app/dest/course/index.js' %}?=2016121272249"></script>
-    <!--<script>
-        $table = $("#table_course");
-    function queryParams(tableParams) {
-        var params = {};
-        console.log(tableParams);
-        params['pagesize'] = tableParams.limit;
-        params['offset'] = tableParams.offset;
-        params['page'] = $table.bootstrapTable('getOptions').pageNumber;
-        params['search'] = $("#search").val();
-                $('#toolbar_table_questions').find('select[name]').each(
-            function () {
-                params[$(this).attr('name')] = $(this).val();
-            }
-        );
-        // 返回所有参数{"pagesize":20, "page":1, "offset":0}
-        // /apis/questions/?pagesize=20&page=1&offset=0
-        return params;
-    }
-    </script>-->
-    <script>
-    click_tag = {
-        'click.tag' :function () {
-            console.log($(this).attr("href"));
-            content_em = $($(this).attr("href"));
-            $.ajax({
-                url:'/apis/courese/',
-                type:'GET',
 
-                success:function (data) {
-                    if(data){
-                    content_em.html(data.tag)
-                    }
-                }
-            })
-        }
-    }
-    </script>
 
     </body>
     </html>
