@@ -99,9 +99,9 @@
 
 
 
-<script type="text/javascript" src="{% static 'comment/js/main.js' %}"></script>
-<script type="text/javascript" src="{% static 'comment/js/sinaFaceAndEffec.js' %}"></script>
-<script type="text/javascript" src="{% static 'comment/js/jquery-1.8.3.min.js' %}"></script>
+{#<script type="text/javascript" src="{% static 'comment/js/main.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'comment/js/sinaFaceAndEffec.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'comment/js/jquery-1.8.3.min.js' %}"></script>#}
             </div>
         </div>
         </div>
@@ -118,18 +118,18 @@ data-flash="false"
 
     <script type="text/javascript" src="{% static 'comment/js/jquery-1.8.3.min.js' %}"></script>
     <script src="{% static 'app/dest/lib/lib.js' %}"></script>
-    <script src="{% static 'jquery/2.2.4/jquery.min.js' %}"></script>
-    <script src="{% static 'ace/1.2.5/ace.js' %}"></script>
-    <script src="{% static 'aliyun/aliyun-oss-sdk-4.3.0.min.js' %}"></script>
-    <script src="{% static 'highlight.js/9.8.0/highlight.min.js' %}"></script>
-    <script src="{% static 'jspdf/1.2.61/jspdf.min.js' %}"></script>
-    <script src="{% static 'plupload/2.1.9/js/plupload.full.min.js' %}"></script>
-    <script src="{% static 'zeroclipboard/2.2.0/ZeroClipboard.min.js' %}"></script>
+{#    <script src="{% static 'jquery/2.2.4/jquery.min.js' %}"></script>#}
+{#    <script src="{% static 'ace/1.2.5/ace.js' %}"></script>#}
+{#    <script src="{% static 'aliyun/aliyun-oss-sdk-4.3.0.min.js' %}"></script>#}
+{#    <script src="{% static 'highlight.js/9.8.0/highlight.min.js' %}"></script>#}
+{#    <script src="{% static 'jspdf/1.2.61/jspdf.min.js' %}"></script>#}
+{#    <script src="{% static 'plupload/2.1.9/js/plupload.full.min.js' %}"></script>#}
+{#    <script src="{% static 'zeroclipboard/2.2.0/ZeroClipboard.min.js' %}"></script>#}
     <script src="{% static 'videojs/video.min.js' %}"></script>
-    <script src="{% static 'bootstrap-tour/0.11.0/js/bootstrap-tour.min.js' %}"></script>
-    <script src="{% static 'bootstrap-table/1.11.0/bootstrap-table.min.js' %}"></script>
-    <script src="{% static 'bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js' %}"></script>
-    <script src="{% static 'bootstrap-table/1.11.0/extensions/filter-control/bootstrap-table-filter-control.min.js' %}"></script>
+{#    <script src="{% static 'bootstrap-tour/0.11.0/js/bootstrap-tour.min.js' %}"></script>#}
+{#    <script src="{% static 'bootstrap-table/1.11.0/bootstrap-table.min.js' %}"></script>#}
+{#    <script src="{% static 'bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js' %}"></script>#}
+{#    <script src="{% static 'bootstrap-table/1.11.0/extensions/filter-control/bootstrap-table-filter-control.min.js' %}"></script>#}
     <script src="{% static 'app/dest/course/labs.js' %}"></script>
     <script type="text/javascript" src="{% static 'comment/js/main.js' %}"></script>
     <script type="text/javascript" src="{% static 'comment/js/sinaFaceAndEffec.js' %}"></script>
@@ -183,7 +183,9 @@ data-flash="false"
             data: frm.serialize(),
             type: 'POST',
             success: function (data) {
-            $('#info-show').prepend(data.html);
+            $('#id_content').val("");
+            $('#info-show').html(data.html);
+            $('#id_comment_label').text(data.comment_count + "条评论");
             },
             error: function (data) {
                 alert("error")
@@ -192,34 +194,34 @@ data-flash="false"
     });
     </script>
 <script>
-    $('#li_comment').click(function () {
-        $.ajax({
-            type: 'GET',
-            url: '/comment/get_comments/',
-            data:{
-                     video_id: $('#video').attr("video_id"),
-                },
-            dataType: 'json',
-            success: function(data){
-                var code = data.code;
-                var count = data.comment_count;
-                if(code == 0){
-                    $('#id_content').val("");
-                    $('#id_comment_label').text(count + "条评论");
-                    $('#info-show').append(data.html);
-                    me.resetload();
-                }else{
-                    me.lock();
-                    me.noData();
-                    me.resetload();
-                }
-            },
-            error: function(xhr, type){
-                alert("失败了");
-                me.resetload();
-                }
-            })
-    })
+
+        $('#li_comment').click(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: '/comment/get_comments/',
+                    data: {
+                        video_id: $('#video').attr("video_id"),
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        var code = data.code;
+                        var count = data.comment_count;
+                        if (code == 0) {
+                            $('#id_content').val("");
+                            $('#id_comment_label').text(count + "条评论");
+                            $('#info-show').html(data.html);
+                        } else {
+                            {#me.lock();#}
+                            {#me.noData();#}
+                            {#me.resetload();#}
+                        }
+                    },
+                    error: function (xhr, type) {
+                        alert("失败了");
+                        {#me.resetload();#}
+                    }
+                })
+        })
 </script>
     </body>
     </html>

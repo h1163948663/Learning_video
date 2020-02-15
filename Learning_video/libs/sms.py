@@ -7,15 +7,13 @@ logger = logging.getLogger('apis')
 
 
 def send_sms(mobile, captcha):
-    # flag用于标记发送短信是否成功
     flag = True
-    # 这个是短信API地址
-    url = 'https://open.ucpaas.com/ol/sms/sendsms'
+    url = 'https://open.ucpaas.com/ol/ sms/sendsms'
     # 准备一下头,声明body的格式https://open.ucpaas.com/ol/sms/{function}
     headers = {
         "Content-Type": "application/json; charset=utf-8"
     }
-    # 还有我们准备用Post传的值，这里值用字典的形式
+
     values = {
         "sid": "074ab94b632b2edf9d450a080d72e0d2",
         "token": "6c9206a8d85a3ddb756f0d70603483fa",
@@ -34,6 +32,7 @@ def send_sms(mobile, captcha):
         html = urllib.request.urlopen(request).read().decode('utf-8')
         # html = '{"code":"000000","count":"1","create_date":"2018-07-23 13:34:06","mobile":"15811564298","msg":"OK","smsid":"852579cbb829c08c917f162b267efce6","uid":""}'
         code = json.loads(html)["code"]
+        print(code)
         if code == "000000":
             logger.info(f"短信发送成功：{html}")
             flag = True

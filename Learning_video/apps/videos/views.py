@@ -29,7 +29,6 @@ class CoureseDetail(LoginRequiredMixin,DetailView,View):
         Courese_name = Courese.objects.filter(courese_name=courese.courese_name,content=courese.content,id=courese.id)[0]
         # print(Courese_name)
         context["my_courese"] = ALLCoureslist.objects.filter(coure_id=Courese_name.id)[0]
-        print(kwargs)
         return context
 
     def get(self, request, *args, **kwargs):

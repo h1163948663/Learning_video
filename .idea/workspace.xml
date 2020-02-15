@@ -2,522 +2,79 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5220e5f5-f9f3-4555-8063-415fb2ca4777" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Learning_video/.idea/Learning_video.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/apps/apis/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/apps/paths/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/apps/questions/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/apps/user/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/apps/user/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/apps/vip/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/libs/patcha.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/libs/sms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/ace/1.2.5/ace.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/aliyun/aliyun-oss-sdk-4.3.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/dest/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/bootstrap/3.3.7/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/bootstrap/3.3.7/css/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/bootstrap/3.3.7/css/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/bootstrap/3.3.7/css/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/bootstrap/3.3.7/css/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/bootstrap/3.3.7/css/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_AMS-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_AMS-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_AMS-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_AMS-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Caligraphic-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Caligraphic-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Caligraphic-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Caligraphic-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Caligraphic-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Caligraphic-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Caligraphic-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Caligraphic-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Fraktur-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Fraktur-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Fraktur-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Fraktur-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Fraktur-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Fraktur-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Fraktur-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Fraktur-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Main-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Main-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Main-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Main-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Main-Italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Main-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Main-Italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Main-Italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Main-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Main-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Main-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Main-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Math-Italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Math-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Math-Italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Math-Italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_SansSerif-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_SansSerif-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_SansSerif-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_SansSerif-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Script-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Script-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Script-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Script-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size1-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size1-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size1-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size1-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size2-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size2-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size2-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size2-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size3-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size3-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size3-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size3-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size4-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size4-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size4-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Size4-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Typewriter-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Typewriter-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Typewriter-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/KaTeX_Typewriter-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/katex/0.6.0/katex.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/videojs/5.11.7/VideoJS.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/videojs/5.11.7/video-js.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/dest/base/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/dest/bootcamp/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/dest/course/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/dest/course/labs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/dest/frontend/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/dest/member/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/dest/path/path.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/dest/question/details.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/dest/question/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/dest/report/details.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/app/dest/user/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-colorpicker/css/colorpicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-colorpicker/img/alpha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-colorpicker/img/hue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-colorpicker/img/saturation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-datepicker/css/datepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-datepicker/js/bootstrap-datepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-daterangepicker/date.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-daterangepicker/daterangepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-daterangepicker/daterangepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/bootstrap-table-locale-all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/bootstrap-table-locale-all.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/bootstrap-table-master.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/bootstrap-table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/bootstrap-table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/bootstrap-table.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/bootstrap-table.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/accent-neutralise/bootstrap-table-accent-neutralise.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/accent-neutralise/bootstrap-table-accent-neutralise.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/angular/bootstrap-table-angular.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/angular/bootstrap-table-angular.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/cookie/bootstrap-table-cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/cookie/bootstrap-table-cookie.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/copy-rows/bootstrap-table-copy-rows.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/copy-rows/bootstrap-table-copy-rows.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/editable/bootstrap-table-editable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/editable/bootstrap-table-editable.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/export/bootstrap-table-export.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/export/bootstrap-table-export.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/filter-control/bootstrap-table-filter-control.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/filter-control/bootstrap-table-filter-control.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/filter/bootstrap-table-filter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/filter/bootstrap-table-filter.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/flat-json/bootstrap-table-flat-json.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/flat-json/bootstrap-table-flat-json.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/group-by-v2/bootstrap-table-group-by.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/group-by-v2/bootstrap-table-group-by.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/group-by-v2/bootstrap-table-group-by.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/group-by/bootstrap-table-group-by.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/group-by/bootstrap-table-group-by.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/group-by/bootstrap-table-group-by.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/i18n-enhance/bootstrap-table-i18n-enhance.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/i18n-enhance/bootstrap-table-i18n-enhance.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/key-events/bootstrap-table-key-events.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/key-events/bootstrap-table-key-events.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/mobile/bootstrap-table-mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/mobile/bootstrap-table-mobile.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/multi-column-toggle/bootstrap-table-multi-toggle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/multi-column-toggle/bootstrap-table-multi-toggle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/multiple-search/bootstrap-table-multiple-search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/multiple-search/bootstrap-table-multiple-search.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/multiple-sort/bootstrap-table-multiple-sort.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/multiple-sort/bootstrap-table-multiple-sort.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/natural-sorting/bootstrap-table-natural-sorting.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/natural-sorting/bootstrap-table-natural-sorting.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/reorder-columns/bootstrap-table-reorder-columns.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/reorder-columns/bootstrap-table-reorder-columns.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/reorder-rows/bootstrap-table-reorder-rows.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/reorder-rows/bootstrap-table-reorder-rows.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/reorder-rows/bootstrap-table-reorder-rows.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/resizable/bootstrap-table-resizable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/resizable/bootstrap-table-resizable.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/select2-filter/bootstrap-table-select2-filter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/select2-filter/bootstrap-table-select2-filter.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/sticky-header/bootstrap-table-sticky-header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/sticky-header/bootstrap-table-sticky-header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/sticky-header/bootstrap-table-sticky-header.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/toolbar/bootstrap-table-toolbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/extensions/toolbar/bootstrap-table-toolbar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-af-ZA.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-af-ZA.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ar-SA.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ar-SA.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ca-ES.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ca-ES.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-cs-CZ.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-cs-CZ.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-da-DK.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-da-DK.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-de-DE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-de-DE.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-el-GR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-el-GR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-en-US.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-en-US.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-es-AR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-es-AR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-es-CR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-es-CR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-es-ES.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-es-ES.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-es-MX.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-es-MX.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-es-NI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-es-NI.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-es-SP.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-es-SP.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-et-EE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-et-EE.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-fa-IR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-fa-IR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-fr-BE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-fr-BE.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-fr-FR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-fr-FR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-he-IL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-he-IL.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-hr-HR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-hr-HR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-hu-HU.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-hu-HU.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-it-IT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-it-IT.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ja-JP.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ja-JP.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ka-GE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ka-GE.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ko-KR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ko-KR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ms-MY.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ms-MY.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-nb-NO.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-nb-NO.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-nl-NL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-nl-NL.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-pl-PL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-pl-PL.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-pt-BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-pt-BR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-pt-PT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-pt-PT.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ro-RO.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ro-RO.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ru-RU.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ru-RU.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-sk-SK.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-sk-SK.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-sv-SE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-sv-SE.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-th-TH.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-th-TH.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-tr-TR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-tr-TR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-uk-UA.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-uk-UA.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ur-PK.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-ur-PK.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-vi-VN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-vi-VN.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-zh-CN.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-zh-TW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/locale/bootstrap-table-zh-TW.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap-table/tableExport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap/css/bootstrap-reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap/fonts/Descr.WD3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap/fonts/glyphicons-halflings-regular.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap/fonts/glyphicons-halflings-regulard41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/chart-master/Chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/ckeditor/ckeditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/data-tables/DT_bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/data-tables/jquery.dataTables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/font-awesome/font/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/font-awesome/font/fontawesome-webfontd41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/font-awesome/font/fontawesome-webfontf77b.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/font-awesome/font/fontawesome-webfontf77b.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/font-awesome/font/fontawesome-webfontf77b.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/fullcalendar/fullcalendar/fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/gritter/css/jquery.gritter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/gritter/images/gritter-light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/gritter/images/gritter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/gritter/images/ie-spacer.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/gritter/js/jquery.gritter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-file-upload/css/jquery.fileupload-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-file-upload/img/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-file-upload/img/progressbar.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-file-upload/js/jquery.fileupload-fp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-file-upload/js/jquery.fileupload-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-file-upload/js/jquery.fileupload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-file-upload/js/jquery.iframe-transport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-file-upload/js/vendor/canvas-to-blob.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-file-upload/js/vendor/jquery.ui.widget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-file-upload/js/vendor/load-image.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-file-upload/js/vendor/tmpl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-knob/js/jquery.knob.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/animated-overlay.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/ui-bg_diagonals-thick_18_b81900_40x40.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/ui-bg_diagonals-thick_20_666666_40x40.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/ui-bg_flat_10_000000_40x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/ui-bg_glass_100_f6f6f6_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/ui-bg_glass_100_fdf5ce_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/ui-bg_glass_65_ffffff_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/ui-bg_gloss-wave_35_f6a828_500x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/ui-icons_222222_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/ui-icons_228ef1_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/ui-icons_ef8c08_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/ui-icons_ffd27a_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/images/ui-icons_ffffff_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/jquery-ui-1.10.1.custom.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery-ui/jquery-ui-1.10.1.custom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/plugins/bootstrap-datepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/plugins/bootstrap-notify.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/plugins/chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/plugins/dataTables.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/plugins/fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/plugins/jquery-ui.custom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/plugins/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/plugins/jquery.vmap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/plugins/jquery.vmap.sampledata.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/plugins/jquery.vmap.world.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/plugins/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/plugins/pace.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/plugins/select2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/plugins/sweetalert.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/jquery/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/morris.js-0.4.3/morris.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/morris.js-0.4.3/morris.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/assets/morris.js-0.4.3/raphael-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/avator/css/amazeui.cropper.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/avator/css/amazeui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/avator/css/custom_up_img.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/avator/img/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/avator/img/hu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/avator/js/amazeui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/avator/js/cropper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/avator/js/custom_up_img.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/avator/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/bootstrap-table/1.11.0/bootstrap-table.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/bootstrap-table/1.11.0/extensions/filter-control/bootstrap-table-filter-control.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/bootstrap-tour/0.11.0/js/bootstrap-tour.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/css/bootstrap-reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/css/owl.carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/css/style-responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/font-awesome/4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/font-awesome/4.7.0/css/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/font-awesome/4.7.0/css/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/font-awesome/4.7.0/css/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/font-awesome/4.7.0/css/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/font-awesome/4.7.0/css/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/fonts/Descr.WD3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/fonts/FZLTCXHJW.TTF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/fonts/glyphicons-halflings-regular.eot@" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/fonts/glyphicons-halflings-regulard41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/highlight.js/9.8.0/highlight.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/highlight.js/9.8.0/monokai-sublime.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1470893356136.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1470893366264.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1470893373975.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471396005610.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471513730333.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471513740139.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471513769430.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471513793360.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471513817808.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471513867033.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471513926288.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471514004752.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471514037180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471514058548.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471514095761.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471514111981.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471514153000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471831989320.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1471832001504.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1472537393017.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1472537414178.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1476005664662.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1476006346021.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1476006471999.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1476094176715.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1476173256875.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/1476237133360.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/Linux&amp;c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/ShiyanlouQRCode.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/banner-vip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/bootcamp-answer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/bootcamp-certificate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/bootcamp-comment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/bootcamp-course.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/bootcamp-env.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/bootcamp-equal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/bootcamp-plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/bootcamp-project.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/bootcamp-qa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/bootcamp-start-click.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/bootcamp-start.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/bootcamp-teacher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/community.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/console-loading-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/console-tab-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/container-title-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/footer-weixin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/homepage-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/icon-vip-advance.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/icon-vip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/introduceContainer1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/introduceContainer2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/introduceContainer3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/introduceContainer4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/invite-banner-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/lab-not-ok.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/laboratory-flag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/laboratory-higheffic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/laboratory-nimble.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/laboratory-proper.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/log_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/logo-grey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/logo_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/lou-level.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/messagefrom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/messageto.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/my-git.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/ncn1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/ncn11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/ncn23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/ncn30.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/org-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/org-gaoxiao.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/org-jingdian.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/org-kaopu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/pay-btn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/share-reports.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/topQuestion.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/vip-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/vip-allcourses.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/vip-clients.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/vip-faq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/vip-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/vip-internet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/img/vip-service-status.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/jquery/2.2.4/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/all-chartjs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/bootstrap-switch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/common-scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/dynamic-table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/easy-pie-chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/external-dragging-calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/form-component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/form-validation-script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/ga.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/gritter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/jquery-1.8.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/jquery-ui-1.9.2.custom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/jquery.customSelect.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/jquery.nicescroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/jquery.scrollTo.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/jquery.sparkline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/jquery.stepy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/jquery.tagsinput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/morris-script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/owl.carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/question_repo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/sliders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/sparkline-chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/jspdf/1.2.61/jspdf.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/plupload/2.1.9/js/plupload.full.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/ravenjs/3.7.0/raven.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/restatic/js/libs/marked/katex/katex.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/restatic/js/libs/marked/solarized_dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/videojs/video.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/static/zeroclipboard/2.2.0/ZeroClipboard.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/bootcamp/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/courses/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/courses/reports.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/courses/show.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/courses/show2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/developer/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/edu/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/labs/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/paths/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/paths/show.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/privacy/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/questions/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/questions/show.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/user/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/user/questions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/user/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/user/reports.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/user/reports_show.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/user/study.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning_video/templates/vip/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning_video/apps/app01/app01/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/Learning_video/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning_video/apps/app01/app01/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning_video/apps/app01/app01/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning_video/apps/app01/app01/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning_video/apps/app01/manage.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/apps/videos/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/apps/videos/templatetags/video_class.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/static/comment/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/static/comment/css/sinaFaceAndEffec.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/static/comment/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/static/comment/images/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/static/comment/js/jquery-1.8.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/static/comment/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/static/comment/js/sinaFaceAndEffec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/static/css/sinaFaceAndEffec.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/MvBBBj.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/eEjVBX.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/static/js/sinaFaceAndEffec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/templates/comment/comment_single.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning_video/templates/courses/comment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/.idea/Learning_video.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/.idea/Learning_video.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/.idea/dataSources/3c3e8305-f207-4365-881b-d0b2a01f6db6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/.idea/dataSources/3c3e8305-f207-4365-881b-d0b2a01f6db6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/.idea/dataSources/a4673e0e-93c5-4036-b1bc-8eca56621c1e.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/Learning_video/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/Learning_video/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/Learning_video/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/Learning_video/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/Learning_video/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/Learning_video/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/apis/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/apps/apis/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/apis/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/apps/apis/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/repo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/apps/repo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/repo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/apps/repo/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/user/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/apps/user/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/apps/user/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/apps/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/apps/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/videos/course.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/videos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/apps/videos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/videos/python_course.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/apps/videos/python_course.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/videos/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/videos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/apps/videos/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/videos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/apps/videos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/vip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/apps/comment/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/vip/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/vip/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/vip/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/apps/videos/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/vip/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/vip/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/vip/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/apps/vip/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/static/app/css/dest/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/static/app/css/dest/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/static/app/css/libs/bootstrap/3.3.7/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/static/app/css/libs/bootstrap/3.3.7/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/static/js/jquery-1.8.3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/static/js/jquery-1.8.3.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/courses/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/templates/courses/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/courses/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/courses/reports.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/courses/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/templates/courses/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/courses/show2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/developer/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/edu/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/labs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/paths/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/templates/paths/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/privacy/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/questions/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/templates/questions/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/tail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learning_video/templates/tail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning_video/templates/vip/index.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -525,22 +82,61 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Learning_video/manage.py">
+        <entry file="file://$PROJECT_DIR$/Learning_video/templates/courses/index.html">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Learning_video/templates/courses/show.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1936">
+              <caret line="88" column="33" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>CO</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Learning_video/apps/videos/models.py" />
+        <option value="$PROJECT_DIR$/Learning_video/Learning_video/settings.py" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="950" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -560,6 +156,12 @@
               <item name="Learning_video" type="462c0819:PsiDirectoryNode" />
               <item name="Learning_video" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Learning_video" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Learning_video" type="462c0819:PsiDirectoryNode" />
+              <item name="Learning_video" type="462c0819:PsiDirectoryNode" />
+              <item name="Learning_video" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -567,6 +169,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -597,16 +200,38 @@
       <workItem from="1564900696777" duration="20000" />
       <workItem from="1564900818160" duration="15000" />
       <workItem from="1565081115057" duration="60000" />
+      <workItem from="1580390425514" duration="1034000" />
+      <workItem from="1580393063561" duration="64000" />
+      <workItem from="1580393628290" duration="983000" />
+      <workItem from="1580624748393" duration="11000" />
+      <workItem from="1580627728494" duration="168000" />
+      <workItem from="1580627906883" duration="3000" />
+      <workItem from="1581227698173" duration="11000" />
+      <workItem from="1581227729354" duration="44000" />
+      <workItem from="1581227827838" duration="32000" />
+      <workItem from="1581227887728" duration="21000" />
+      <workItem from="1581248692305" duration="71000" />
+      <workItem from="1581251199080" duration="2429000" />
+      <workItem from="1581261071603" duration="18000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95000" />
+    <option name="totallyTimeSpent" value="4984000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25670242" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21648793" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -615,26 +240,86 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3286119" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Database" order="4" weight="0.25134048" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Learning_video/apps/videos/vaild_difficulty.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Learning_video/apps/videos/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1449">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Learning_video/apps/videos/python_course.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Learning_video/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Learning_video/Learning_video/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="165" column="40" lean-forward="true" selection-start-line="165" selection-start-column="40" selection-end-line="165" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Learning_video/apps/videos/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Learning_video/templates/courses/comment.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Learning_video/templates/courses/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Learning_video/templates/courses/show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1936">
+          <caret line="88" column="33" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

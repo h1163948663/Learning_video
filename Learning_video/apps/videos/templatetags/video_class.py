@@ -15,8 +15,6 @@ def user_collect_style(courses_id, user):
 @register.filter()
 @register.simple_tag()
 def get_courses_tag_count(tag):
-    print(tag)
-    print(type(tag))
     video_count = Courese.objects.filter(tag=tag).all()
     return len(video_count)
 

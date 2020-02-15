@@ -79,8 +79,6 @@ class Login(View):
             if form.is_valid():
                 username = form.cleaned_data["username"]
                 user, flag = form.check_password()
-                print(user, flag)
-                print(user.is_active)
                 if user is not None and flag == True:
                     auth.login(request, user)
                     logger.info(f"{user.username}登录成功")

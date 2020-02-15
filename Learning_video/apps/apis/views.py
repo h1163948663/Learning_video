@@ -25,9 +25,9 @@ def get_mobile_captcha(request):
         mobile_captcha = "".join(random.choices('0123456789', k=6))
         print(mobile_captcha)
         from django.core.cache import cache
-        # 将短信验证码写入redis, 300s 过期
         cache.set(mobile, mobile_captcha, 300)
-        if not sms.send_sms(mobile, mobile_captcha):
+        print(sms.send_sms(mobile, mobile_captcha))
+        if  sms.send_sms(mobile, mobile_captcha) == False:
             raise ValueError('发送短信失败')
     except Exception as ex:
         logger.error(ex)
@@ -39,6 +39,7 @@ def get_captcha(request):
     f = BytesIO()
     # 调用check_code生成照片和验证码
     img, code = patcha.create_validate_code()
+    print(code)
     # 将验证码存在服务器的session中，用于校验
     request.session['captcha_code'] = code
     # 生成的图片放置于开辟的内存中
@@ -46,7 +47,10 @@ def get_captcha(request):
     # 将内存的数据读取出来，转化为base64格式
     ret_type = "data:image/jpg;base64,".encode()
     ret = ret_type+base64.encodebytes(f.getvalue())
+    print(ret)
+    print(type(ret))
     del f
+    code = 0
     return HttpResponse(ret)
 
 def check_captcha(request):
@@ -56,7 +60,6 @@ def check_captcha(request):
     print(post_captcha_code, session_captcha_code)
     if post_captcha_code.lower() == session_captcha_code.lower():
         ret = {"code": 200, "msg": "验证码正确"}
-        print(ret)
     return JsonResponse(ret)
 
 
@@ -82,7 +85,6 @@ class CouresList(View):
             courses = courses.order_by('create_time')
         if order == 'hotest':
             courses = courses.order_by('view_count').reverse()
-        print(courses)
         coures_tag = Tag.objects.all()
         paginator = Paginator(courses,15)
         page = request.GET.get('page')
@@ -142,10 +144,7 @@ def collect(request):
     if not request.user.is_authenticated:
         return JsonResponse({"code": 1, "msg": "请先登录"})
     video_id = request.POST['video_id']
-    print(video_id)
     video = Courese.objects.get(pk=video_id)
-    print(video)
     user = request.user
-    print(user)
     video.switch_collect(user)
     return JsonResponse({"code": 0, "user_collected": video.user_collected(user)})

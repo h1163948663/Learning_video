@@ -243,7 +243,7 @@ CACHES = {
         # BACKEND配置缓存后端为RedisCache
         'BACKEND': 'django_redis.cache.RedisCache',
         # LOCATION配置redis服务器地址
-        'LOCATION': 'redis://192.168.0.44:6379',
+        'LOCATION': 'redis://111.129.147.105:6379',
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             # 密码：如果redis有密码，记得写上去
@@ -251,7 +251,7 @@ CACHES = {
         },
     },
 }
-#配置图片
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 if not os.path.exists(MEDIA_ROOT):
     os.mkdir(MEDIA_ROOT)

@@ -39,11 +39,9 @@ $(document).ready(function() {
   <strong>用户登入</strong>
  </dt>
  <dd class="user_icon">
-{#  <input type="text" placeholder="用户名" class="login_txtbx"/>#}
      {{ form.username }}
  </dd>
  <dd class="pwd_icon">
-{#  <input type="password" placeholder="密码" class="login_txtbx"/>#}
      {{ form.password }}
  </dd>
 
@@ -76,12 +74,16 @@ $(document).ready(function() {
     $("#captcha_img").click(get_captcha_img);
 
     function get_captcha_img() {
+        alert("ok");
         $.ajax({
             url: '{% url 'apis:get_captcha' %}',
             type: 'GET',
             dataType: 'text',
             success: function (data) {
                 $('#captcha_img').attr('src', data);
+            },
+            error:function (data) {
+
             }
         });
     }
@@ -100,7 +102,7 @@ $(document).ready(function() {
             data: {"captcha_code": captcha_code},
             success: function (data) {
                 if(data.code == 400){
-                     $('.msg').html("验证码错误");
+                     {#$('.msg').html("验证码错误");#}
                 }else{
                     $('.msg').html("验证成功！");
                 }

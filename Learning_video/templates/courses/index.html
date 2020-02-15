@@ -265,28 +265,25 @@
          data-msg-system=""
     ></div>
 
-    <script src="{% static 'app/dest/lib/lib.js' %}?=2016121272249"></script>
-    <script src="{% static 'jquery/2.2.4/jquery.min.js' %}"></script>
-    <script src="{% static 'ace/1.2.5/ace.js' %}"></script>
-    <script src="{% static 'aliyun/aliyun-oss-sdk-4.3.0.min.js' %}"></script>
-    <script src="{% static 'highlight.js/9.8.0/highlight.min.js' %}"></script>
-    <script src="{% static 'jspdf/1.2.61/jspdf.min.js' %}"></script>
-    <script src="{% static 'plupload/2.1.9/js/plupload.full.min.js' %}"></script>
-    <script src="{% static 'zeroclipboard/2.2.0/ZeroClipboard.min.js' %}"></script>
-    <script src="{% static 'videojs/video.min.js' %}"></script>
-    <script src="{% static 'bootstrap-tour/0.11.0/js/bootstrap-tour.min.js' %}"></script>
-    <script src="{% static 'bootstrap-table/1.11.0/bootstrap-table.min.js' %}"></script>
-    <script src="{% static 'bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js' %}"></script>
-    <script src="{% static 'bootstrap-table/1.11.0/extensions/filter-control/bootstrap-table-filter-control.min.js' %}"></script>
-
-    <script src="{% static 'ravenjs/3.7.0/raven.min.js' %}"></script>
+{#    <script src="{% static 'app/dest/lib/lib.js' %}?=2016121272249"></script>#}
+{#    <script src="{% static 'jquery/2.2.4/jquery.min.js' %}"></script>#}
+{#    <script src="{% static 'ace/1.2.5/ace.js' %}"></script>#}
+{#    <script src="{% static 'aliyun/aliyun-oss-sdk-4.3.0.min.js' %}"></script>#}
+{#    <script src="{% static 'highlight.js/9.8.0/highlight.min.js' %}"></script>#}
+{#    <script src="{% static 'jspdf/1.2.61/jspdf.min.js' %}"></script>#}
+{#    <script src="{% static 'plupload/2.1.9/js/plupload.full.min.js' %}"></script>#}
+{#    <script src="{% static 'zeroclipboard/2.2.0/ZeroClipboard.min.js' %}"></script>#}
+{#    <script src="{% static 'videojs/video.min.js' %}"></script>#}
+{#    <script src="{% static 'bootstrap-tour/0.11.0/js/bootstrap-tour.min.js' %}"></script>#}
+{#    <script src="{% static 'bootstrap-table/1.11.0/bootstrap-table.min.js' %}"></script>#}
+{#    <script src="{% static 'bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js' %}"></script>#}
+{#    <script src="{% static 'bootstrap-table/1.11.0/extensions/filter-control/bootstrap-table-filter-control.min.js' %}"></script>#}
+{##}
+{#    <script src="{% static 'ravenjs/3.7.0/raven.min.js' %}"></script>#}
     <script>
     {% for i in contacts %}
-    $(function (){
-
         $("#like{{ i.id }}").click(function () {
             var video_id = $("#video_id{{ i.id }}").attr("video_id");
-            {#alert(video_id)#}
             console.log('ok');
             $.ajax({
                 url: '/apis/collect/',
@@ -317,18 +314,11 @@
               alert("收藏失败")
             }
             });
-            console.log('ok2')
         });
-    }
-    );
     {% endfor %}
     </script>
 
-    <script>
-        Raven.config('https://bc3878b7ed0a4468a65390bd79e6e73f@sentry.shiyanlou.com/5', {
-            release: '3.12.13'
-        }).install();
-    </script>
+
 
 
     <div id="jinja-data"
@@ -338,7 +328,7 @@
 
     ></div>
 
-    <script src="{% static 'app/dest/course/index.js' %}?=2016121272249"></script>
+{#    <script src="{% static 'app/dest/course/index.js' %}?=2016121272249"></script>#}
 
 
     </body>

@@ -25,10 +25,10 @@ from django.views.decorators.csrf import csrf_exempt
 def submit_comment(request,id):
     video = get_object_or_404(ALLCoureslist, id=id)
     form = CommentForm(data=request.POST)
-    print(form)
+
 
     if form.is_valid():
-        # print('success')
+
         new_comment = form.save(commit=False)
         new_comment.user = request.user
         new_comment.nickname = request.user.username
@@ -44,12 +44,10 @@ def submit_comment(request,id):
 
         comments = list()
         comments.append(data)
-        print(comments)
-
+        comments = video.comment_set.order_by('-timestamp').all()
+        comment_count = len(comments)
         html = render_to_string("comment/comment_single.html", {"comments": comments})
-        print(html)
-        print(type(html))
-        return JsonResponse({"code":0, "html": html})
+        return JsonResponse({"code":0, "html": html,"comment_count":comment_count})
     return JsonResponse({"code":1,'msg':'评论失败!'})
 
 @csrf_exempt
@@ -59,7 +57,6 @@ def get_comments(request):
     page = request.GET.get('page')
     page_size = request.GET.get('page_size')
     video_id = request.GET.get('video_id')
-    print(video_id)
     video = get_object_or_404(ALLCoureslist, pk=video_id)
     comments = video.comment_set.order_by('-timestamp').all()
     comment_count = len(comments)
